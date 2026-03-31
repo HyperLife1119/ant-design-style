@@ -1,0 +1,282 @@
+.ant-transfer-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-transfer-css-var::before,
+.ant-transfer-css-var::after {
+  box-sizing: border-box;
+}
+.ant-transfer-css-var [class^="ant-transfer"],
+.ant-transfer-css-var [class*=" ant-transfer"] {
+  box-sizing: border-box;
+}
+.ant-transfer-css-var [class^="ant-transfer"]::before,
+.ant-transfer-css-var [class*=" ant-transfer"]::before,
+.ant-transfer-css-var [class^="ant-transfer"]::after,
+.ant-transfer-css-var [class*=" ant-transfer"]::after {
+  box-sizing: border-box;
+}
+.ant-transfer {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+.ant-transfer .ant-transfer-disabled .ant-transfer-list {
+  background: var(--ant-color-bg-container-disabled);
+}
+.ant-transfer .ant-transfer-list {
+  display: flex;
+  flex-direction: column;
+  width: var(--ant-transfer-list-width);
+  height: var(--ant-transfer-list-height);
+  border: var(--ant-line-width) var(--ant-line-type) var(--ant-color-border);
+  border-radius: var(--ant-border-radius-lg);
+}
+.ant-transfer .ant-transfer-list-with-pagination {
+  width: var(--ant-transfer-list-width-lg);
+  height: auto;
+}
+.ant-transfer .ant-transfer-list-search .anticon-search {
+  color: var(--ant-color-text-disabled);
+}
+.ant-transfer .ant-transfer-list-header {
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: var(--ant-transfer-header-height);
+  padding: calc(
+      var(--ant-transfer-transfer-header-vertical-padding) - var(
+          --ant-line-width
+        )
+    )
+    var(--ant-padding-sm) var(--ant-transfer-transfer-header-vertical-padding);
+  color: var(--ant-color-text);
+  background: var(--ant-color-bg-container);
+  border-bottom: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-color-split);
+  border-radius: var(--ant-border-radius-lg) var(--ant-border-radius-lg) 0 0;
+}
+.ant-transfer .ant-transfer-list-header > *:not(:last-child) {
+  margin-inline-end: 4px;
+}
+.ant-transfer .ant-transfer-list-header > * {
+  flex: none;
+}
+.ant-transfer .ant-transfer-list-header-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: auto;
+  text-align: end;
+}
+.ant-transfer .ant-transfer-list-header-dropdown {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--ant-font-size-icon);
+  transform: translateY(10%);
+  cursor: pointer;
+}
+.ant-transfer .ant-transfer-list-header-dropdown > * {
+  line-height: 1;
+}
+.ant-transfer .ant-transfer-list-header-dropdown svg {
+  display: inline-block;
+}
+.ant-transfer .ant-transfer-list-header-dropdown[disabled] {
+  cursor: not-allowed;
+}
+.ant-transfer .ant-transfer-list-body {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  font-size: var(--ant-font-size);
+  min-height: 0;
+}
+.ant-transfer .ant-transfer-list-body-search-wrapper {
+  position: relative;
+  flex: none;
+  padding: var(--ant-padding-sm);
+}
+.ant-transfer .ant-transfer-list-content {
+  flex: auto;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+  border-radius: 0 0 calc(var(--ant-border-radius-lg) - var(--ant-line-width))
+    calc(var(--ant-border-radius-lg) - var(--ant-line-width));
+}
+.ant-transfer .ant-transfer-list-content-item {
+  display: flex;
+  align-items: center;
+  min-height: var(--ant-transfer-item-height);
+  padding: var(--ant-transfer-item-padding-block) var(--ant-padding-sm);
+  transition: all var(--ant-motion-duration-slow);
+}
+.ant-transfer .ant-transfer-list-content-item > *:not(:last-child) {
+  margin-inline-end: var(--ant-margin-xs);
+}
+.ant-transfer .ant-transfer-list-content-item > * {
+  flex: none;
+}
+.ant-transfer .ant-transfer-list-content-item-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: auto;
+}
+.ant-transfer .ant-transfer-list-content-item-remove {
+  color: var(--ant-color-border);
+  text-decoration: var(--ant-link-decoration);
+  outline: none;
+  cursor: pointer;
+  transition: all var(--ant-motion-duration-slow);
+  border: 0;
+  padding: 0;
+  background: none;
+  user-select: none;
+}
+.ant-transfer .ant-transfer-list-content-item-remove:focus-visible {
+  outline: var(--ant-line-width-focus) solid var(--ant-color-primary-border);
+  outline-offset: 1px;
+  transition:
+    outline-offset 0s,
+    outline 0s;
+}
+.ant-transfer .ant-transfer-list-content-item-remove:hover {
+  color: var(--ant-color-link-hover);
+  text-decoration: var(--ant-link-hover-decoration);
+}
+.ant-transfer .ant-transfer-list-content-item-remove:focus {
+  color: var(--ant-color-link-hover);
+  text-decoration: var(--ant-link-focus-decoration);
+}
+.ant-transfer .ant-transfer-list-content-item-remove:active {
+  color: var(--ant-color-link-active);
+  text-decoration: var(--ant-link-hover-decoration);
+}
+.ant-transfer .ant-transfer-list-content-item-remove:hover,
+.ant-transfer .ant-transfer-list-content-item-remove:focus {
+  color: var(--ant-color-text-secondary);
+}
+.ant-transfer
+  .ant-transfer-list-content-item:not(
+    .ant-transfer-list-content-item-disabled
+  ):hover {
+  background-color: var(--ant-control-item-bg-hover);
+  cursor: pointer;
+}
+.ant-transfer
+  .ant-transfer-list-content-item:not(
+    .ant-transfer-list-content-item-disabled
+  ).ant-transfer-list-content-item-checked:hover {
+  background-color: var(--ant-control-item-bg-active-hover);
+}
+.ant-transfer .ant-transfer-list-content-item-checked {
+  background-color: var(--ant-control-item-bg-active);
+}
+.ant-transfer .ant-transfer-list-content-item-disabled {
+  color: var(--ant-color-text-disabled);
+  cursor: not-allowed;
+}
+.ant-transfer
+  .ant-transfer-list-content-show-remove
+  .ant-transfer-list-content-item:not(
+    .ant-transfer-list-content-item-disabled
+  ):hover {
+  background: transparent;
+  cursor: default;
+}
+.ant-transfer .ant-transfer-list-pagination {
+  padding: var(--ant-padding-xs);
+  text-align: end;
+  border-top: var(--ant-line-width) var(--ant-line-type) var(--ant-color-split);
+}
+.ant-transfer .ant-transfer-list-pagination .ant-pagination-options {
+  padding-inline-end: var(--ant-padding-xs);
+}
+.ant-transfer .ant-transfer-list-body-not-found {
+  flex: none;
+  width: 100%;
+  margin: auto 0;
+  color: var(--ant-color-text-disabled);
+  text-align: center;
+}
+.ant-transfer .ant-transfer-list-footer {
+  border-top: var(--ant-line-width) var(--ant-line-type) var(--ant-color-split);
+}
+.ant-transfer .ant-transfer-list-checkbox {
+  line-height: 1;
+}
+.ant-transfer .ant-transfer-operation {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 var(--ant-margin-xs);
+  vertical-align: middle;
+  gap: var(--ant-margin-xxs);
+}
+.ant-transfer .ant-transfer-operation .ant-btn .anticon {
+  font-size: var(--ant-font-size-icon);
+}
+.ant-transfer-customize-list .ant-transfer-list {
+  flex: 1 1 50%;
+  width: auto;
+  height: auto;
+  min-height: var(--ant-transfer-list-height);
+  min-width: 0;
+}
+.ant-transfer-customize-list .ant-table-wrapper .ant-table-small {
+  border: 0;
+  border-radius: 0;
+}
+.ant-transfer-customize-list
+  .ant-table-wrapper
+  .ant-table-small
+  .ant-table-selection-column {
+  width: var(--ant-control-height-lg);
+  min-width: var(--ant-control-height-lg);
+}
+.ant-transfer-customize-list
+  .ant-table-wrapper
+  .ant-table-pagination.ant-table-pagination {
+  margin: 0;
+  padding: var(--ant-padding-xs);
+}
+.ant-transfer-customize-list .ant-input[disabled] {
+  background-color: transparent;
+}
+.ant-transfer-status-error .ant-transfer-list {
+  border-color: var(--ant-color-error);
+}
+.ant-transfer-status-error .ant-transfer-list-search:not([disabled]) {
+  border-color: var(--ant-color-border);
+}
+.ant-transfer-status-warning .ant-transfer-list {
+  border-color: var(--ant-color-warning);
+}
+.ant-transfer-status-warning .ant-transfer-list-search:not([disabled]) {
+  border-color: var(--ant-color-border);
+}
+.ant-transfer-rtl {
+  direction: rtl;
+}

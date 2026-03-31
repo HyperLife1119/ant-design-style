@@ -1,0 +1,649 @@
+.ant-mentions-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-mentions-css-var::before,
+.ant-mentions-css-var::after {
+  box-sizing: border-box;
+}
+.ant-mentions-css-var [class^="ant-mentions"],
+.ant-mentions-css-var [class*=" ant-mentions"] {
+  box-sizing: border-box;
+}
+.ant-mentions-css-var [class^="ant-mentions"]::before,
+.ant-mentions-css-var [class*=" ant-mentions"]::before,
+.ant-mentions-css-var [class^="ant-mentions"]::after,
+.ant-mentions-css-var [class*=" ant-mentions"]::after {
+  box-sizing: border-box;
+}
+.ant-mentions {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 var(--ant-mentions-padding-inline);
+  color: var(--ant-color-text);
+  font-size: var(--ant-mentions-input-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  border-radius: var(--ant-border-radius);
+  transition: all var(--ant-motion-duration-mid);
+  height: auto;
+  overflow: hidden;
+  white-space: pre-wrap;
+  vertical-align: bottom;
+}
+.ant-mentions::-moz-placeholder {
+  opacity: 1;
+}
+.ant-mentions::placeholder {
+  color: var(--ant-color-text-placeholder);
+  user-select: none;
+}
+.ant-mentions:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions-lg {
+  padding: var(--ant-mentions-padding-block-lg)
+    var(--ant-mentions-padding-inline-lg);
+  font-size: var(--ant-mentions-input-font-size-lg);
+  line-height: var(--ant-line-height-lg);
+  border-radius: var(--ant-border-radius-lg);
+}
+.ant-mentions-sm {
+  padding: var(--ant-mentions-padding-block-sm)
+    var(--ant-mentions-padding-inline-sm);
+  font-size: var(--ant-mentions-input-font-size-sm);
+  border-radius: var(--ant-border-radius-sm);
+}
+.ant-mentions-rtl,
+.ant-mentions-textarea-rtl {
+  direction: rtl;
+}
+.ant-mentions-outlined {
+  background: var(--ant-color-bg-container);
+  border-width: var(--ant-line-width);
+  border-style: var(--ant-line-type);
+  border-color: var(--ant-color-border);
+}
+.ant-mentions-outlined:hover {
+  border-color: var(--ant-mentions-hover-border-color);
+  background-color: var(--ant-mentions-hover-bg);
+}
+.ant-mentions-outlined:focus,
+.ant-mentions-outlined:focus-within {
+  border-color: var(--ant-mentions-active-border-color);
+  box-shadow: var(--ant-mentions-active-shadow);
+  outline: 0;
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-outlined.ant-mentions-disabled,
+.ant-mentions-outlined[disabled] {
+  color: var(--ant-color-text-disabled);
+  background-color: var(--ant-color-bg-container-disabled);
+  border-color: var(--ant-color-border);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.ant-mentions-outlined.ant-mentions-disabled input[disabled],
+.ant-mentions-outlined[disabled] input[disabled],
+.ant-mentions-outlined.ant-mentions-disabled textarea[disabled],
+.ant-mentions-outlined[disabled] textarea[disabled] {
+  cursor: not-allowed;
+}
+.ant-mentions-outlined.ant-mentions-disabled:hover:not([disabled]),
+.ant-mentions-outlined[disabled]:hover:not([disabled]) {
+  border-color: var(--ant-color-border);
+  background-color: var(--ant-color-bg-container-disabled);
+}
+.ant-mentions-outlined.ant-mentions-status-error:not(.ant-mentions-disabled) {
+  background: var(--ant-color-bg-container);
+  border-width: var(--ant-line-width);
+  border-style: var(--ant-line-type);
+  border-color: var(--ant-color-error);
+}
+.ant-mentions-outlined.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):hover {
+  border-color: var(--ant-color-error-border-hover);
+  background-color: var(--ant-mentions-hover-bg);
+}
+.ant-mentions-outlined.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):focus,
+.ant-mentions-outlined.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):focus-within {
+  border-color: var(--ant-color-error);
+  box-shadow: var(--ant-mentions-error-active-shadow);
+  outline: 0;
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-outlined.ant-mentions-status-error:not(.ant-mentions-disabled)
+  .ant-mentions-prefix,
+.ant-mentions-outlined.ant-mentions-status-error:not(.ant-mentions-disabled)
+  .ant-mentions-suffix {
+  color: var(--ant-color-error);
+}
+.ant-mentions-outlined.ant-mentions-status-error.ant-mentions-disabled {
+  border-color: var(--ant-color-error);
+}
+.ant-mentions-outlined.ant-mentions-status-warning:not(.ant-mentions-disabled) {
+  background: var(--ant-color-bg-container);
+  border-width: var(--ant-line-width);
+  border-style: var(--ant-line-type);
+  border-color: var(--ant-color-warning);
+}
+.ant-mentions-outlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):hover {
+  border-color: var(--ant-color-warning-border-hover);
+  background-color: var(--ant-mentions-hover-bg);
+}
+.ant-mentions-outlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):focus,
+.ant-mentions-outlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):focus-within {
+  border-color: var(--ant-color-warning);
+  box-shadow: var(--ant-mentions-warning-active-shadow);
+  outline: 0;
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-outlined.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  .ant-mentions-prefix,
+.ant-mentions-outlined.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  .ant-mentions-suffix {
+  color: var(--ant-color-warning);
+}
+.ant-mentions-outlined.ant-mentions-status-warning.ant-mentions-disabled {
+  border-color: var(--ant-color-warning);
+}
+.ant-mentions-filled {
+  background: var(--ant-color-fill-tertiary);
+  border-width: var(--ant-line-width);
+  border-style: var(--ant-line-type);
+  border-color: transparent;
+}
+input.ant-mentions-filled,
+.ant-mentions-filled input,
+textarea.ant-mentions-filled,
+.ant-mentions-filled textarea {
+  color: unset;
+}
+.ant-mentions-filled:hover {
+  background: var(--ant-color-fill-secondary);
+}
+.ant-mentions-filled:focus,
+.ant-mentions-filled:focus-within {
+  outline: 0;
+  border-color: var(--ant-mentions-active-border-color);
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-filled.ant-mentions-disabled,
+.ant-mentions-filled[disabled] {
+  color: var(--ant-color-text-disabled);
+  background-color: var(--ant-color-bg-container-disabled);
+  border-color: var(--ant-color-border);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.ant-mentions-filled.ant-mentions-disabled input[disabled],
+.ant-mentions-filled[disabled] input[disabled],
+.ant-mentions-filled.ant-mentions-disabled textarea[disabled],
+.ant-mentions-filled[disabled] textarea[disabled] {
+  cursor: not-allowed;
+}
+.ant-mentions-filled.ant-mentions-disabled:hover:not([disabled]),
+.ant-mentions-filled[disabled]:hover:not([disabled]) {
+  border-color: var(--ant-color-border);
+  background-color: var(--ant-color-bg-container-disabled);
+}
+.ant-mentions-filled.ant-mentions-status-error:not(.ant-mentions-disabled) {
+  background: var(--ant-color-error-bg);
+  border-width: var(--ant-line-width);
+  border-style: var(--ant-line-type);
+  border-color: transparent;
+}
+input.ant-mentions-filled.ant-mentions-status-error:not(.ant-mentions-disabled),
+.ant-mentions-filled.ant-mentions-status-error:not(.ant-mentions-disabled)
+  input,
+textarea.ant-mentions-filled.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ),
+.ant-mentions-filled.ant-mentions-status-error:not(.ant-mentions-disabled)
+  textarea {
+  color: var(--ant-color-error-text);
+}
+.ant-mentions-filled.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):hover {
+  background: var(--ant-color-error-bg-hover);
+}
+.ant-mentions-filled.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):focus,
+.ant-mentions-filled.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):focus-within {
+  outline: 0;
+  border-color: var(--ant-color-error);
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-filled.ant-mentions-status-error:not(.ant-mentions-disabled)
+  .ant-mentions-prefix,
+.ant-mentions-filled.ant-mentions-status-error:not(.ant-mentions-disabled)
+  .ant-mentions-suffix {
+  color: var(--ant-color-error);
+}
+.ant-mentions-filled.ant-mentions-status-warning:not(.ant-mentions-disabled) {
+  background: var(--ant-color-warning-bg);
+  border-width: var(--ant-line-width);
+  border-style: var(--ant-line-type);
+  border-color: transparent;
+}
+input.ant-mentions-filled.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ),
+.ant-mentions-filled.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  input,
+textarea.ant-mentions-filled.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ),
+.ant-mentions-filled.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  textarea {
+  color: var(--ant-color-warning-text);
+}
+.ant-mentions-filled.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):hover {
+  background: var(--ant-color-warning-bg-hover);
+}
+.ant-mentions-filled.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):focus,
+.ant-mentions-filled.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):focus-within {
+  outline: 0;
+  border-color: var(--ant-color-warning);
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-filled.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  .ant-mentions-prefix,
+.ant-mentions-filled.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  .ant-mentions-suffix {
+  color: var(--ant-color-warning);
+}
+.ant-mentions-borderless {
+  background: transparent;
+  border: none;
+}
+.ant-mentions-borderless:focus,
+.ant-mentions-borderless:focus-within {
+  outline: none;
+}
+.ant-mentions-borderless.ant-mentions-disabled,
+.ant-mentions-borderless[disabled] {
+  color: var(--ant-color-text-disabled);
+  cursor: not-allowed;
+}
+.ant-mentions-borderless.ant-mentions-status-error,
+.ant-mentions-borderless.ant-mentions-status-error input,
+.ant-mentions-borderless.ant-mentions-status-error textarea {
+  color: var(--ant-color-error);
+}
+.ant-mentions-borderless.ant-mentions-status-warning,
+.ant-mentions-borderless.ant-mentions-status-warning input,
+.ant-mentions-borderless.ant-mentions-status-warning textarea {
+  color: var(--ant-color-warning);
+}
+.ant-mentions-affix-wrapper {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  min-width: 0;
+  padding: var(--ant-mentions-padding-block) var(--ant-mentions-padding-inline);
+  color: var(--ant-color-text);
+  font-size: var(--ant-mentions-input-font-size);
+  line-height: var(--ant-line-height);
+  border-radius: var(--ant-border-radius);
+  transition: all var(--ant-motion-duration-mid);
+  padding-block: 0;
+  padding-inline-start: 0;
+  padding-inline-end: var(--ant-mentions-padding-inline);
+}
+.ant-mentions-affix-wrapper::-moz-placeholder {
+  opacity: 1;
+}
+.ant-mentions-affix-wrapper::placeholder {
+  color: var(--ant-color-text-placeholder);
+  user-select: none;
+}
+.ant-mentions-affix-wrapper:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions-affix-wrapper-lg {
+  padding: var(--ant-mentions-padding-block-lg)
+    var(--ant-mentions-padding-inline-lg);
+  font-size: var(--ant-mentions-input-font-size-lg);
+  line-height: var(--ant-line-height-lg);
+  border-radius: var(--ant-border-radius-lg);
+}
+.ant-mentions-affix-wrapper-sm {
+  padding: var(--ant-mentions-padding-block-sm)
+    var(--ant-mentions-padding-inline-sm);
+  font-size: var(--ant-mentions-input-font-size-sm);
+  border-radius: var(--ant-border-radius-sm);
+}
+.ant-mentions-affix-wrapper-rtl,
+.ant-mentions-affix-wrapper-textarea-rtl {
+  direction: rtl;
+}
+.ant-mentions-affix-wrapper::before {
+  display: inline-block;
+  width: 0;
+  visibility: hidden;
+  content: "\a0";
+}
+.ant-mentions-affix-wrapper .ant-mentions-suffix {
+  display: inline-flex;
+  align-items: center;
+}
+.ant-mentions-affix-wrapper
+  .ant-mentions-suffix:has(.ant-form-item-feedback-icon)
+  .ant-mentions-clear-icon {
+  margin-inline-end: var(--ant-margin-xs);
+}
+.ant-mentions-affix-wrapper .ant-mentions-suffix .ant-form-item-feedback-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ant-mentions-affix-wrapper .ant-mentions-clear-icon {
+  inset-inline-end: 0;
+  inset-block-start: calc(
+    var(--ant-font-size) * var(--ant-line-height) * 0.5 +
+      var(--ant-mentions-padding-block)
+  );
+  padding: 0;
+  line-height: 0;
+  color: var(--ant-color-text-quaternary);
+  font-size: var(--ant-font-size-icon);
+  vertical-align: -1px;
+  cursor: pointer;
+  transition: color var(--ant-motion-duration-slow);
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.ant-mentions-affix-wrapper .ant-mentions-clear-icon:hover {
+  color: var(--ant-color-icon);
+}
+.ant-mentions-affix-wrapper .ant-mentions-clear-icon:active {
+  color: var(--ant-color-text);
+}
+.ant-mentions-affix-wrapper .ant-mentions-clear-icon-hidden {
+  visibility: hidden;
+}
+.ant-mentions-underlined {
+  background: var(--ant-color-bg-container);
+  border-width: var(--ant-line-width) 0;
+  border-style: var(--ant-line-type) none;
+  border-color: transparent transparent var(--ant-color-border) transparent;
+  border-radius: 0;
+}
+.ant-mentions-underlined:hover {
+  border-color: transparent transparent var(--ant-mentions-hover-border-color)
+    transparent;
+  background-color: var(--ant-mentions-hover-bg);
+}
+.ant-mentions-underlined:focus,
+.ant-mentions-underlined:focus-within {
+  border-color: transparent transparent var(--ant-mentions-active-border-color)
+    transparent;
+  outline: 0;
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-underlined.ant-mentions-disabled,
+.ant-mentions-underlined[disabled] {
+  color: var(--ant-color-text-disabled);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.ant-mentions-underlined.ant-mentions-disabled:hover,
+.ant-mentions-underlined[disabled]:hover {
+  border-color: transparent transparent var(--ant-color-border) transparent;
+}
+.ant-mentions-underlined input[disabled],
+.ant-mentions-underlined textarea[disabled] {
+  cursor: not-allowed;
+}
+.ant-mentions-underlined.ant-mentions-status-error:not(.ant-mentions-disabled) {
+  background: var(--ant-color-bg-container);
+  border-width: var(--ant-line-width) 0;
+  border-style: var(--ant-line-type) none;
+  border-color: transparent transparent var(--ant-color-error) transparent;
+  border-radius: 0;
+}
+.ant-mentions-underlined.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):hover {
+  border-color: transparent transparent var(--ant-color-error-border-hover)
+    transparent;
+  background-color: var(--ant-mentions-hover-bg);
+}
+.ant-mentions-underlined.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):focus,
+.ant-mentions-underlined.ant-mentions-status-error:not(
+    .ant-mentions-disabled
+  ):focus-within {
+  border-color: transparent transparent var(--ant-color-error) transparent;
+  outline: 0;
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-underlined.ant-mentions-status-error:not(.ant-mentions-disabled)
+  .ant-mentions-prefix,
+.ant-mentions-underlined.ant-mentions-status-error:not(.ant-mentions-disabled)
+  .ant-mentions-suffix {
+  color: var(--ant-color-error);
+}
+.ant-mentions-underlined.ant-mentions-status-error.ant-mentions-disabled {
+  border-color: transparent transparent var(--ant-color-error) transparent;
+}
+.ant-mentions-underlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ) {
+  background: var(--ant-color-bg-container);
+  border-width: var(--ant-line-width) 0;
+  border-style: var(--ant-line-type) none;
+  border-color: transparent transparent var(--ant-color-warning) transparent;
+  border-radius: 0;
+}
+.ant-mentions-underlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):hover {
+  border-color: transparent transparent var(--ant-color-warning-border-hover)
+    transparent;
+  background-color: var(--ant-mentions-hover-bg);
+}
+.ant-mentions-underlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):focus,
+.ant-mentions-underlined.ant-mentions-status-warning:not(
+    .ant-mentions-disabled
+  ):focus-within {
+  border-color: transparent transparent var(--ant-color-warning) transparent;
+  outline: 0;
+  background-color: var(--ant-mentions-active-bg);
+}
+.ant-mentions-underlined.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  .ant-mentions-prefix,
+.ant-mentions-underlined.ant-mentions-status-warning:not(.ant-mentions-disabled)
+  .ant-mentions-suffix {
+  color: var(--ant-color-warning);
+}
+.ant-mentions-underlined.ant-mentions-status-warning.ant-mentions-disabled {
+  border-color: transparent transparent var(--ant-color-warning) transparent;
+}
+.ant-mentions-disabled > textarea {
+  color: var(--ant-color-text-disabled);
+  background-color: var(--ant-color-bg-container-disabled);
+  border-color: var(--ant-color-border);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.ant-mentions-disabled > textarea input[disabled],
+.ant-mentions-disabled > textarea textarea[disabled] {
+  cursor: not-allowed;
+}
+.ant-mentions-disabled > textarea:hover:not([disabled]) {
+  border-color: var(--ant-color-border);
+  background-color: var(--ant-color-bg-container-disabled);
+}
+.ant-mentions > textarea,
+.ant-mentions-affix-wrapper > .ant-mentions > textarea,
+.ant-mentions .ant-mentions-measure,
+.ant-mentions-affix-wrapper > .ant-mentions .ant-mentions-measure {
+  color: var(--ant-color-text);
+  box-sizing: border-box;
+  min-height: calc(var(--ant-control-height) - 2px);
+  margin: 0;
+  padding: var(--ant-mentions-padding-block) var(--ant-mentions-padding-inline);
+  overflow: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-size-adjust: inherit;
+  font-stretch: inherit;
+  line-height: inherit;
+  direction: inherit;
+  letter-spacing: inherit;
+  white-space: inherit;
+  text-align: inherit;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: inherit;
+  tab-size: inherit;
+}
+.ant-mentions > textarea:disabled,
+.ant-mentions-affix-wrapper > .ant-mentions > textarea:disabled {
+  color: var(--ant-color-text-disabled);
+}
+.ant-mentions > textarea,
+.ant-mentions-affix-wrapper > .ant-mentions > textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  padding: var(--ant-mentions-padding-block) 0;
+}
+.ant-mentions > textarea::-moz-placeholder,
+.ant-mentions-affix-wrapper > .ant-mentions > textarea::-moz-placeholder {
+  opacity: 1;
+}
+.ant-mentions > textarea::placeholder,
+.ant-mentions-affix-wrapper > .ant-mentions > textarea::placeholder {
+  color: var(--ant-color-text-placeholder);
+  user-select: none;
+}
+.ant-mentions > textarea:placeholder-shown,
+.ant-mentions-affix-wrapper > .ant-mentions > textarea:placeholder-shown {
+  text-overflow: ellipsis;
+}
+.ant-mentions .ant-mentions-measure,
+.ant-mentions-affix-wrapper > .ant-mentions .ant-mentions-measure {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  z-index: -1;
+  color: transparent;
+  pointer-events: none;
+}
+.ant-mentions .ant-mentions-measure > span,
+.ant-mentions-affix-wrapper > .ant-mentions .ant-mentions-measure > span {
+  display: inline-block;
+  min-height: 1em;
+}
+.ant-mentions-dropdown {
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--ant-padding-xxs);
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: absolute;
+  top: -9999px;
+  inset-inline-start: -9999px;
+  z-index: var(--ant-mentions-z-index-popup);
+  font-variant: initial;
+  background-color: var(--ant-color-bg-elevated);
+  border-radius: var(--ant-border-radius-lg);
+  outline: none;
+  box-shadow: var(--ant-box-shadow-secondary);
+}
+.ant-mentions-dropdown-hidden {
+  display: none;
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu {
+  max-height: var(--ant-mentions-dropdown-height);
+  margin: 0;
+  padding-inline-start: 0;
+  overflow: auto;
+  list-style: none;
+  outline: none;
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu-item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  display: block;
+  min-width: var(--ant-mentions-control-item-width);
+  padding: var(--ant-mentions-item-padding-vertical)
+    var(--ant-control-padding-horizontal);
+  color: var(--ant-color-text);
+  border-radius: var(--ant-border-radius);
+  font-weight: normal;
+  line-height: var(--ant-line-height);
+  cursor: pointer;
+  transition: background var(--ant-motion-duration-slow) ease;
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu-item:hover {
+  background-color: var(--ant-control-item-bg-hover);
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu-item-disabled {
+  color: var(--ant-color-text-disabled);
+  cursor: not-allowed;
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu-item-disabled:hover {
+  color: var(--ant-color-text-disabled);
+  background-color: var(--ant-control-item-bg-hover);
+  cursor: not-allowed;
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu-item-selected {
+  color: var(--ant-color-text);
+  font-weight: var(--ant-font-weight-strong);
+  background-color: var(--ant-control-item-bg-hover);
+}
+.ant-mentions-dropdown .ant-mentions-dropdown-menu-item-active {
+  background-color: var(--ant-control-item-bg-hover);
+}

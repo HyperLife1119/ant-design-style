@@ -1,0 +1,53 @@
+.ant-date-picker-css-var {
+  --ant-date-picker-padding-block: 3px;
+  --ant-date-picker-padding-block-sm: 0px;
+  --ant-date-picker-padding-block-lg: 5.5px;
+  --ant-date-picker-padding-inline: 7px;
+  --ant-date-picker-padding-inline-sm: 7px;
+  --ant-date-picker-padding-inline-lg: 11px;
+  --ant-date-picker-addon-bg: rgba(0, 0, 0, 0.02);
+  --ant-date-picker-active-border-color: #1677ff;
+  --ant-date-picker-hover-border-color: #4096ff;
+  --ant-date-picker-active-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+  --ant-date-picker-error-active-shadow: 0 0 0 2px rgba(255, 38, 5, 0.06);
+  --ant-date-picker-warning-active-shadow: 0 0 0 2px rgba(255, 215, 5, 0.1);
+  --ant-date-picker-hover-bg: #ffffff;
+  --ant-date-picker-active-bg: #ffffff;
+  --ant-date-picker-input-font-size: 12px;
+  --ant-date-picker-input-font-size-lg: 14px;
+  --ant-date-picker-input-font-size-sm: 12px;
+  --ant-date-picker-internal_fixed_item_margin: 2px;
+  --ant-date-picker-cell-hover-bg: rgba(0, 0, 0, 0.04);
+  --ant-date-picker-cell-active-with-range-bg: #e6f4ff;
+  --ant-date-picker-cell-hover-with-range-bg: #cbe0fd;
+  --ant-date-picker-cell-range-border-color: #82b4f9;
+  --ant-date-picker-cell-bg-disabled: rgba(0, 0, 0, 0.04);
+  --ant-date-picker-time-column-width: 49px;
+  --ant-date-picker-time-column-height: 224px;
+  --ant-date-picker-time-cell-height: 28px;
+  --ant-date-picker-cell-width: 31.5px;
+  --ant-date-picker-cell-height: 21px;
+  --ant-date-picker-text-height: 35px;
+  --ant-date-picker-without-time-cell-height: 57.75px;
+  --ant-date-picker-multiple-item-bg: rgba(0, 0, 0, 0.06);
+  --ant-date-picker-multiple-item-border-color: transparent;
+  --ant-date-picker-multiple-item-height: 20px;
+  --ant-date-picker-multiple-item-height-sm: 13px;
+  --ant-date-picker-multiple-item-height-lg: 27px;
+  --ant-date-picker-multiple-selector-bg-disabled: rgba(0, 0, 0, 0.04);
+  --ant-date-picker-multiple-item-color-disabled: rgba(0, 0, 0, 0.25);
+  --ant-date-picker-multiple-item-border-color-disabled: transparent;
+  --ant-date-picker-arrow-shadow-width: 8.970562748477143px;
+  --ant-date-picker-arrow-path: path(
+    "M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z"
+  );
+  --ant-date-picker-arrow-polygon: polygon(
+    1.6568542494923806px 100%,
+    50% 1.6568542494923806px,
+    14.34314575050762px 100%,
+    1.6568542494923806px 100%
+  );
+  --ant-date-picker-presets-width: 120px;
+  --ant-date-picker-presets-max-width: 200px;
+  --ant-date-picker-z-index-popup: 1050;
+}

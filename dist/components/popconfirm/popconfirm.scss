@@ -1,0 +1,39 @@
+.ant-popconfirm {
+  z-index: var(--ant-popconfirm-z-index-popup);
+}
+.ant-popconfirm.ant-popover {
+  font-size: var(--ant-font-size);
+}
+.ant-popconfirm .ant-popconfirm-message {
+  margin-bottom: var(--ant-margin-xs);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+}
+.ant-popconfirm
+  .ant-popconfirm-message
+  > .ant-popconfirm-message-icon
+  .anticon {
+  color: var(--ant-color-warning);
+  font-size: var(--ant-font-size);
+  line-height: 1;
+  margin-inline-end: var(--ant-margin-xs);
+}
+.ant-popconfirm .ant-popconfirm-message .ant-popconfirm-title {
+  font-weight: var(--ant-font-weight-strong);
+  color: var(--ant-color-text-heading);
+}
+.ant-popconfirm .ant-popconfirm-message .ant-popconfirm-title:only-child {
+  font-weight: normal;
+}
+.ant-popconfirm .ant-popconfirm-message .ant-popconfirm-description {
+  margin-top: var(--ant-margin-xxs);
+  color: var(--ant-color-text);
+}
+.ant-popconfirm .ant-popconfirm-buttons {
+  text-align: end;
+  white-space: nowrap;
+}
+.ant-popconfirm .ant-popconfirm-buttons button {
+  margin-inline-start: var(--ant-margin-xs);
+}

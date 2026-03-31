@@ -1,0 +1,338 @@
+.ant-tour-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-tour-css-var::before,
+.ant-tour-css-var::after {
+  box-sizing: border-box;
+}
+.ant-tour-css-var [class^="ant-tour"],
+.ant-tour-css-var [class*=" ant-tour"] {
+  box-sizing: border-box;
+}
+.ant-tour-css-var [class^="ant-tour"]::before,
+.ant-tour-css-var [class*=" ant-tour"]::before,
+.ant-tour-css-var [class^="ant-tour"]::after,
+.ant-tour-css-var [class*=" ant-tour"]::after {
+  box-sizing: border-box;
+}
+.ant-tour {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: absolute;
+  z-index: var(--ant-tour-z-index-popup);
+  max-width: fit-content;
+  visibility: visible;
+  width: 520px;
+  --antd-arrow-background-color: var(--ant-color-bg-elevated);
+}
+.ant-tour-pure {
+  max-width: 100%;
+  position: relative;
+}
+.ant-tour.ant-tour-hidden {
+  display: none;
+}
+.ant-tour .ant-tour-content {
+  position: relative;
+}
+.ant-tour .ant-tour-inner {
+  text-align: start;
+  text-decoration: none;
+  border-radius: var(--ant-border-radius-lg);
+  box-shadow: var(--ant-box-shadow-tertiary);
+  position: relative;
+  background-color: var(--ant-color-bg-elevated);
+  border: none;
+  background-clip: padding-box;
+}
+.ant-tour .ant-tour-inner .ant-tour-close {
+  position: absolute;
+  top: var(--ant-padding);
+  inset-inline-end: var(--ant-padding);
+  color: var(--ant-color-icon);
+  background: none;
+  border: none;
+  width: var(--ant-tour-close-btn-size);
+  height: var(--ant-tour-close-btn-size);
+  border-radius: var(--ant-border-radius-sm);
+  transition:
+    background-color var(--ant-motion-duration-mid),
+    color var(--ant-motion-duration-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.ant-tour .ant-tour-inner .ant-tour-close:hover {
+  color: var(--ant-color-icon-hover);
+  background-color: var(--ant-color-bg-text-hover);
+}
+.ant-tour .ant-tour-inner .ant-tour-close:active {
+  background-color: var(--ant-color-bg-text-active);
+}
+.ant-tour .ant-tour-inner .ant-tour-close:focus-visible {
+  outline: var(--ant-line-width-focus) solid var(--ant-color-primary-border);
+  outline-offset: 1px;
+  transition:
+    outline-offset 0s,
+    outline 0s;
+}
+.ant-tour .ant-tour-inner .ant-tour-cover {
+  text-align: center;
+  padding: calc(
+      var(--ant-padding) + var(--ant-tour-close-btn-size) +
+        var(--ant-padding-xs)
+    )
+    var(--ant-padding) 0;
+}
+.ant-tour .ant-tour-inner .ant-tour-cover img {
+  width: 100%;
+}
+.ant-tour .ant-tour-inner .ant-tour-header {
+  padding: var(--ant-padding) var(--ant-padding) var(--ant-padding-xs);
+  width: calc(100% - var(--ant-tour-close-btn-size));
+  word-break: break-word;
+}
+.ant-tour .ant-tour-inner .ant-tour-header .ant-tour-title {
+  font-weight: var(--ant-font-weight-strong);
+}
+.ant-tour .ant-tour-inner .ant-tour-description {
+  padding: 0 var(--ant-padding);
+  word-wrap: break-word;
+}
+.ant-tour .ant-tour-inner .ant-tour-footer {
+  padding: var(--ant-padding-xs) var(--ant-padding) var(--ant-padding);
+  text-align: end;
+  border-radius: 0 0 var(--ant-border-radius-xs) var(--ant-border-radius-xs);
+  display: flex;
+}
+.ant-tour .ant-tour-inner .ant-tour-footer .ant-tour-indicators {
+  display: inline-block;
+}
+.ant-tour
+  .ant-tour-inner
+  .ant-tour-footer
+  .ant-tour-indicators
+  .ant-tour-indicator {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--ant-color-fill);
+}
+.ant-tour
+  .ant-tour-inner
+  .ant-tour-footer
+  .ant-tour-indicators
+  .ant-tour-indicator:not(:last-child) {
+  margin-inline-end: 6px;
+}
+.ant-tour
+  .ant-tour-inner
+  .ant-tour-footer
+  .ant-tour-indicators
+  .ant-tour-indicator-active {
+  background: var(--ant-color-primary);
+}
+.ant-tour .ant-tour-inner .ant-tour-footer .ant-tour-buttons {
+  margin-inline-start: auto;
+}
+.ant-tour .ant-tour-inner .ant-tour-footer .ant-tour-buttons .ant-btn {
+  margin-inline-start: var(--ant-margin-xs);
+}
+.ant-tour .ant-tour-primary,
+.ant-tour.ant-tour-primary {
+  --antd-arrow-background-color: var(--ant-color-primary);
+}
+.ant-tour .ant-tour-primary .ant-tour-inner,
+.ant-tour.ant-tour-primary .ant-tour-inner {
+  color: var(--ant-color-text-light-solid);
+  text-align: start;
+  text-decoration: none;
+  background-color: var(--ant-color-primary);
+  border-radius: var(--ant-border-radius);
+  box-shadow: var(--ant-box-shadow-tertiary);
+}
+.ant-tour .ant-tour-primary .ant-tour-inner .ant-tour-close,
+.ant-tour.ant-tour-primary .ant-tour-inner .ant-tour-close {
+  color: var(--ant-color-text-light-solid);
+}
+.ant-tour
+  .ant-tour-primary
+  .ant-tour-inner
+  .ant-tour-indicators
+  .ant-tour-indicator,
+.ant-tour.ant-tour-primary
+  .ant-tour-inner
+  .ant-tour-indicators
+  .ant-tour-indicator {
+  background: var(--ant-tour-primary-prev-btn-bg);
+}
+.ant-tour
+  .ant-tour-primary
+  .ant-tour-inner
+  .ant-tour-indicators
+  .ant-tour-indicator-active,
+.ant-tour.ant-tour-primary
+  .ant-tour-inner
+  .ant-tour-indicators
+  .ant-tour-indicator-active {
+  background: var(--ant-color-text-light-solid);
+}
+.ant-tour .ant-tour-primary .ant-tour-inner .ant-tour-prev-btn,
+.ant-tour.ant-tour-primary .ant-tour-inner .ant-tour-prev-btn {
+  color: var(--ant-color-text-light-solid);
+  border-color: var(--ant-tour-primary-prev-btn-bg);
+  background-color: var(--ant-color-primary);
+}
+.ant-tour .ant-tour-primary .ant-tour-inner .ant-tour-prev-btn:hover,
+.ant-tour.ant-tour-primary .ant-tour-inner .ant-tour-prev-btn:hover {
+  background-color: var(--ant-tour-primary-prev-btn-bg);
+  border-color: transparent;
+}
+.ant-tour .ant-tour-primary .ant-tour-inner .ant-tour-next-btn,
+.ant-tour.ant-tour-primary .ant-tour-inner .ant-tour-next-btn {
+  color: var(--ant-color-primary);
+  border-color: transparent;
+  background: var(--ant-color-white);
+}
+.ant-tour .ant-tour-primary .ant-tour-inner .ant-tour-next-btn:hover,
+.ant-tour.ant-tour-primary .ant-tour-inner .ant-tour-next-btn:hover {
+  background: var(--ant-tour-primary-next-btn-hover-bg);
+}
+.ant-tour-mask .ant-tour-placeholder-animated {
+  transition: all var(--ant-motion-duration-slow);
+}
+-placement-left .ant-tour-inner,
+-placement-leftTop .ant-tour-inner,
+-placement-leftBottom .ant-tour-inner,
+-placement-right .ant-tour-inner,
+-placement-rightTop .ant-tour-inner,
+-placement-rightBottom .ant-tour-inner {
+  border-radius: min(var(--ant-border-radius-lg), 8px);
+}
+.ant-tour .ant-tour-arrow {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  width: var(--ant-size-popup-arrow);
+  height: var(--ant-size-popup-arrow);
+  overflow: hidden;
+}
+.ant-tour .ant-tour-arrow::before {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: var(--ant-size-popup-arrow);
+  height: calc(var(--ant-size-popup-arrow) / 2);
+  background: var(--antd-arrow-background-color);
+  clip-path: var(--ant-tour-arrow-polygon);
+  clip-path: var(--ant-tour-arrow-path);
+  content: "";
+}
+.ant-tour .ant-tour-arrow::after {
+  content: "";
+  position: absolute;
+  width: var(--ant-tour-arrow-shadow-width);
+  height: var(--ant-tour-arrow-shadow-width);
+  bottom: 0;
+  inset-inline: 0;
+  margin: auto;
+  border-radius: 0 0 var(--ant-border-radius-xs) 0;
+  transform: translateY(50%) rotate(-135deg);
+  box-shadow: var(--ant-box-shadow-popover-arrow);
+  z-index: 0;
+  background: transparent;
+}
+.ant-tour .ant-tour-arrow:before {
+  background: var(--antd-arrow-background-color);
+}
+.ant-tour-placement-top > .ant-tour-arrow,
+.ant-tour-placement-topLeft > .ant-tour-arrow,
+.ant-tour-placement-topRight > .ant-tour-arrow {
+  bottom: 0;
+  transform: translateY(100%) rotate(180deg);
+}
+.ant-tour-placement-top > .ant-tour-arrow {
+  left: 50%;
+  transform: translateX(-50%) translateY(100%) rotate(180deg);
+}
+.ant-tour-placement-topLeft {
+  --arrow-offset-horizontal: var(--ant-tour-arrow-offset-horizontal);
+}
+.ant-tour-placement-topLeft > .ant-tour-arrow {
+  left: var(--ant-tour-arrow-offset-horizontal);
+}
+.ant-tour-placement-topRight {
+  --arrow-offset-horizontal: calc(
+    100% - var(--ant-tour-arrow-offset-horizontal)
+  );
+}
+.ant-tour-placement-topRight > .ant-tour-arrow {
+  right: var(--ant-tour-arrow-offset-horizontal);
+}
+.ant-tour-placement-bottom > .ant-tour-arrow,
+.ant-tour-placement-bottomLeft > .ant-tour-arrow,
+.ant-tour-placement-bottomRight > .ant-tour-arrow {
+  top: 0;
+  transform: translateY(-100%);
+}
+.ant-tour-placement-bottom > .ant-tour-arrow {
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.ant-tour-placement-bottomLeft {
+  --arrow-offset-horizontal: var(--ant-tour-arrow-offset-horizontal);
+}
+.ant-tour-placement-bottomLeft > .ant-tour-arrow {
+  left: var(--ant-tour-arrow-offset-horizontal);
+}
+.ant-tour-placement-bottomRight {
+  --arrow-offset-horizontal: calc(
+    100% - var(--ant-tour-arrow-offset-horizontal)
+  );
+}
+.ant-tour-placement-bottomRight > .ant-tour-arrow {
+  right: var(--ant-tour-arrow-offset-horizontal);
+}
+.ant-tour-placement-left > .ant-tour-arrow,
+.ant-tour-placement-leftTop > .ant-tour-arrow,
+.ant-tour-placement-leftBottom > .ant-tour-arrow {
+  right: 0;
+  transform: translateX(100%) rotate(90deg);
+}
+.ant-tour-placement-left > .ant-tour-arrow {
+  top: 50%;
+  transform: translateY(-50%) translateX(100%) rotate(90deg);
+}
+.ant-tour-placement-leftTop > .ant-tour-arrow {
+  top: var(--ant-tour-arrow-offset-vertical);
+}
+.ant-tour-placement-leftBottom > .ant-tour-arrow {
+  bottom: var(--ant-tour-arrow-offset-vertical);
+}
+.ant-tour-placement-right > .ant-tour-arrow,
+.ant-tour-placement-rightTop > .ant-tour-arrow,
+.ant-tour-placement-rightBottom > .ant-tour-arrow {
+  left: 0;
+  transform: translateX(-100%) rotate(-90deg);
+}
+.ant-tour-placement-right > .ant-tour-arrow {
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%) rotate(-90deg);
+}
+.ant-tour-placement-rightTop > .ant-tour-arrow {
+  top: var(--ant-tour-arrow-offset-vertical);
+}
+.ant-tour-placement-rightBottom > .ant-tour-arrow {
+  bottom: var(--ant-tour-arrow-offset-vertical);
+}

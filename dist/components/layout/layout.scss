@@ -1,0 +1,65 @@
+.ant-layout-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-layout-css-var::before,
+.ant-layout-css-var::after {
+  box-sizing: border-box;
+}
+.ant-layout-css-var [class^="ant-layout"],
+.ant-layout-css-var [class*=" ant-layout"] {
+  box-sizing: border-box;
+}
+.ant-layout-css-var [class^="ant-layout"]::before,
+.ant-layout-css-var [class*=" ant-layout"]::before,
+.ant-layout-css-var [class^="ant-layout"]::after,
+.ant-layout-css-var [class*=" ant-layout"]::after {
+  box-sizing: border-box;
+}
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--ant-layout-body-bg);
+}
+.ant-layout,
+.ant-layout * {
+  box-sizing: border-box;
+}
+.ant-layout.ant-layout-has-sider {
+  flex-direction: row;
+}
+.ant-layout.ant-layout-has-sider > .ant-layout,
+.ant-layout.ant-layout-has-sider > .ant-layout-content {
+  width: 0;
+}
+.ant-layout .ant-layout-header,
+.ant-layout.ant-layout-footer {
+  flex: 0 0 auto;
+}
+.ant-layout-rtl {
+  direction: rtl;
+}
+.ant-layout-header {
+  height: var(--ant-layout-header-height);
+  padding: var(--ant-layout-header-padding);
+  color: var(--ant-layout-header-color);
+  line-height: var(--ant-layout-header-height);
+  background: var(--ant-layout-header-bg);
+}
+.ant-layout-header .ant-menu {
+  line-height: inherit;
+}
+.ant-layout-footer {
+  padding: var(--ant-layout-footer-padding);
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  background: var(--ant-layout-footer-bg);
+}
+.ant-layout-content {
+  flex: auto;
+  color: var(--ant-color-text);
+  min-height: 0;
+}

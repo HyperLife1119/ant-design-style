@@ -1,0 +1,199 @@
+.ant-checkbox-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-checkbox-css-var::before,
+.ant-checkbox-css-var::after {
+  box-sizing: border-box;
+}
+.ant-checkbox-css-var [class^="ant-checkbox"],
+.ant-checkbox-css-var [class*=" ant-checkbox"] {
+  box-sizing: border-box;
+}
+.ant-checkbox-css-var [class^="ant-checkbox"]::before,
+.ant-checkbox-css-var [class*=" ant-checkbox"]::before,
+.ant-checkbox-css-var [class^="ant-checkbox"]::after,
+.ant-checkbox-css-var [class*=" ant-checkbox"]::after {
+  box-sizing: border-box;
+}
+.ant-checkbox-group {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: var(--ant-margin-xs);
+}
+.ant-checkbox-group > .ant-row {
+  flex: 1;
+}
+.ant-checkbox-wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  display: inline-flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+.ant-checkbox-wrapper:after {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  content: "\a0";
+}
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-inline-start: 0;
+}
+.ant-checkbox-wrapper.ant-checkbox-wrapper-in-form-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+.ant-checkbox {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: 1;
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: var(--ant-border-radius-sm);
+  align-self: center;
+}
+.ant-checkbox .ant-checkbox-input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+  margin: 0;
+}
+.ant-checkbox .ant-checkbox-input:focus-visible + .ant-checkbox-inner {
+  outline: var(--ant-line-width-focus) solid var(--ant-color-primary-border);
+  outline-offset: 1px;
+  transition:
+    outline-offset 0s,
+    outline 0s;
+}
+.ant-checkbox .ant-checkbox-inner {
+  box-sizing: border-box;
+  display: block;
+  width: var(--ant-control-interactive-size);
+  height: var(--ant-control-interactive-size);
+  direction: ltr;
+  background-color: var(--ant-color-bg-container);
+  border: var(--ant-line-width) var(--ant-line-type) var(--ant-color-border);
+  border-radius: var(--ant-border-radius-sm);
+  border-collapse: separate;
+  transition: all var(--ant-motion-duration-slow);
+}
+.ant-checkbox .ant-checkbox-inner:after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 25%;
+  display: table;
+  width: calc(var(--ant-control-interactive-size) / 14 * 5);
+  height: calc(var(--ant-control-interactive-size) / 14 * 8);
+  border: var(--ant-line-width-bold) solid var(--ant-color-white);
+  border-top: 0;
+  border-inline-start: 0;
+  transform: rotate(45deg) scale(0) translate(-50%, -50%);
+  opacity: 0;
+  content: "";
+  transition:
+    all var(--ant-motion-duration-fast) var(--ant-motion-ease-in-back),
+    opacity var(--ant-motion-duration-fast);
+}
+.ant-checkbox + span {
+  padding-inline-start: var(--ant-padding-xs);
+  padding-inline-end: var(--ant-padding-xs);
+}
+.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-inner,
+.ant-checkbox:not(.ant-checkbox-disabled):hover .ant-checkbox-inner {
+  border-color: var(--ant-color-primary);
+}
+.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-checked:not(.ant-checkbox-disabled)
+  .ant-checkbox-inner {
+  background-color: var(--ant-color-primary-hover);
+  border-color: transparent;
+}
+.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-checked:not(.ant-checkbox-disabled):after {
+  border-color: var(--ant-color-primary-hover);
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--ant-color-primary);
+  border-color: var(--ant-color-primary);
+}
+.ant-checkbox-checked .ant-checkbox-inner:after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  transition: all var(--ant-motion-duration-mid) var(--ant-motion-ease-out-back)
+    var(--ant-motion-duration-fast);
+}
+.ant-checkbox-wrapper-checked:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-inner,
+.ant-checkbox-checked:not(.ant-checkbox-disabled):hover .ant-checkbox-inner {
+  background-color: var(--ant-color-primary-hover);
+  border-color: transparent;
+}
+.ant-checkbox-indeterminate .ant-checkbox-inner {
+  background-color: var(--ant-color-bg-container);
+  border-color: var(--ant-color-border);
+}
+.ant-checkbox-indeterminate .ant-checkbox-inner:after {
+  top: 50%;
+  inset-inline-start: 50%;
+  width: calc(var(--ant-font-size-lg) / 2);
+  height: calc(var(--ant-font-size-lg) / 2);
+  background-color: var(--ant-color-primary);
+  border: 0;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  content: "";
+}
+.ant-checkbox-indeterminate:hover .ant-checkbox-inner {
+  background-color: var(--ant-color-bg-container);
+  border-color: var(--ant-color-primary);
+}
+.ant-checkbox-wrapper-disabled {
+  cursor: not-allowed;
+}
+.ant-checkbox-disabled,
+.ant-checkbox-disabled .ant-checkbox-input {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.ant-checkbox-disabled .ant-checkbox-inner {
+  background: var(--ant-color-bg-container-disabled);
+  border-color: var(--ant-color-border);
+}
+.ant-checkbox-disabled .ant-checkbox-inner:after {
+  border-color: var(--ant-color-text-disabled);
+}
+.ant-checkbox-disabled:after {
+  display: none;
+}
+.ant-checkbox-disabled + span {
+  color: var(--ant-color-text-disabled);
+}
+.ant-checkbox-disabled.ant-checkbox-indeterminate .ant-checkbox-inner::after {
+  background: var(--ant-color-text-disabled);
+}

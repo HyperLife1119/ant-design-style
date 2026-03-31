@@ -1,0 +1,23 @@
+.ant-affix-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-affix-css-var::before,
+.ant-affix-css-var::after {
+  box-sizing: border-box;
+}
+.ant-affix-css-var [class^="ant-affix"],
+.ant-affix-css-var [class*=" ant-affix"] {
+  box-sizing: border-box;
+}
+.ant-affix-css-var [class^="ant-affix"]::before,
+.ant-affix-css-var [class*=" ant-affix"]::before,
+.ant-affix-css-var [class^="ant-affix"]::after,
+.ant-affix-css-var [class*=" ant-affix"]::after {
+  box-sizing: border-box;
+}
+.ant-affix {
+  position: fixed;
+  z-index: var(--ant-affix-z-index-popup);
+}

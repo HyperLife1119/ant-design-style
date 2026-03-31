@@ -1,0 +1,61 @@
+.ant-empty-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-empty-css-var::before,
+.ant-empty-css-var::after {
+  box-sizing: border-box;
+}
+.ant-empty-css-var [class^="ant-empty"],
+.ant-empty-css-var [class*=" ant-empty"] {
+  box-sizing: border-box;
+}
+.ant-empty-css-var [class^="ant-empty"]::before,
+.ant-empty-css-var [class*=" ant-empty"]::before,
+.ant-empty-css-var [class^="ant-empty"]::after,
+.ant-empty-css-var [class*=" ant-empty"]::after {
+  box-sizing: border-box;
+}
+.ant-empty {
+  margin-inline: var(--ant-margin-xs);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  text-align: center;
+}
+.ant-empty .ant-empty-image {
+  height: calc(var(--ant-control-height-lg) * 2.5);
+  margin-bottom: var(--ant-margin-xs);
+  opacity: var(--ant-opacity-image);
+}
+.ant-empty .ant-empty-image img {
+  height: 100%;
+}
+.ant-empty .ant-empty-image svg {
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.ant-empty .ant-empty-description {
+  color: var(--ant-color-text-description);
+}
+.ant-empty .ant-empty-footer {
+  margin-top: var(--ant-margin);
+}
+.ant-empty-normal {
+  margin-block: var(--ant-margin-xl);
+  color: var(--ant-color-text-description);
+}
+.ant-empty-normal .ant-empty-description {
+  color: var(--ant-color-text-description);
+}
+.ant-empty-normal .ant-empty-image {
+  height: var(--ant-control-height-lg);
+}
+.ant-empty-small {
+  margin-block: var(--ant-margin-xs);
+  color: var(--ant-color-text-description);
+}
+.ant-empty-small .ant-empty-image {
+  height: calc(var(--ant-control-height-lg) * 0.875);
+}

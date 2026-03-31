@@ -1,0 +1,30 @@
+{
+  "name": "ant-design-style",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsx scripts/build.tsx"
+  },
+  "author": "hyperlife1119",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.24.0",
+    "@ant-design/icons": "^6.1.1",
+    "antd": "^5.29.3",
+    "fs-extra": "^11.3.4",
+    "glob": "^13.0.6",
+    "postcss": "^8.5.8",
+    "postcss-discard-duplicates": "^7.0.2",
+    "prettier": "^3.8.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  }
+}

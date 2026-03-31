@@ -1,0 +1,390 @@
+.ant-image-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-image-css-var::before,
+.ant-image-css-var::after {
+  box-sizing: border-box;
+}
+.ant-image-css-var [class^="ant-image"],
+.ant-image-css-var [class*=" ant-image"] {
+  box-sizing: border-box;
+}
+.ant-image-css-var [class^="ant-image"]::before,
+.ant-image-css-var [class*=" ant-image"]::before,
+.ant-image-css-var [class^="ant-image"]::after,
+.ant-image-css-var [class*=" ant-image"]::after {
+  box-sizing: border-box;
+}
+.ant-image {
+  position: relative;
+  display: inline-block;
+}
+.ant-image .ant-image-img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.ant-image .ant-image-img-placeholder {
+  background-color: var(--ant-color-bg-container-disabled);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTQuNSAyLjVoLTEzQS41LjUgMCAwIDAgMSAzdjEwYS41LjUgMCAwIDAgLjUuNWgxM2EuNS41IDAgMCAwIC41LS41VjNhLjUuNSAwIDAgMC0uNS0uNXpNNS4yODEgNC43NWExIDEgMCAwIDEgMCAyIDEgMSAwIDAgMSAwLTJ6bTguMDMgNi44M2EuMTI3LjEyNyAwIDAgMS0uMDgxLjAzSDIuNzY5YS4xMjUuMTI1IDAgMCAxLS4wOTYtLjIwN2wyLjY2MS0zLjE1NmEuMTI2LjEyNiAwIDAgMSAuMTc3LS4wMTZsLjAxNi4wMTZMNy4wOCAxMC4wOWwyLjQ3LTIuOTNhLjEyNi4xMjYgMCAwIDEgLjE3Ny0uMDE2bC4wMTUuMDE2IDMuNTg4IDQuMjQ0YS4xMjcuMTI3IDAgMCAxLS4wMi4xNzV6IiBmaWxsPSIjOEM4QzhDIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30%;
+}
+.ant-image .ant-image-mask {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ant-color-text-light-solid);
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--ant-motion-duration-slow);
+}
+.ant-image .ant-image-mask .ant-image-mask-info {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 var(--ant-padding-xxs);
+}
+.ant-image .ant-image-mask .ant-image-mask-info .anticon {
+  margin-inline-end: var(--ant-margin-xxs);
+}
+.ant-image .ant-image-mask .ant-image-mask-info .anticon svg {
+  vertical-align: baseline;
+}
+.ant-image .ant-image-mask:hover {
+  opacity: 1;
+}
+.ant-image .ant-image-placeholder {
+  position: absolute;
+  inset: 0;
+}
+.ant-image-preview-root .ant-image-preview {
+  height: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+.ant-image-preview-root .ant-image-preview-body {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.ant-image-preview-root .ant-image-preview-img {
+  max-width: 100%;
+  max-height: 70%;
+  vertical-align: middle;
+  transform: scale3d(1, 1, 1);
+  cursor: grab;
+  transition: transform var(--ant-motion-duration-slow)
+    var(--ant-motion-ease-out) 0s;
+  user-select: none;
+}
+.ant-image-preview-root .ant-image-preview-img-wrapper {
+  position: absolute;
+  inset: 0;
+  transition: transform var(--ant-motion-duration-slow)
+    var(--ant-motion-ease-out) 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ant-image-preview-root .ant-image-preview-img-wrapper > * {
+  pointer-events: auto;
+}
+.ant-image-preview-root .ant-image-preview-img-wrapper::before {
+  display: inline-block;
+  width: 1px;
+  height: 50%;
+  margin-inline-end: -1px;
+  content: "";
+}
+.ant-image-preview-root
+  .ant-image-preview-moving
+  .ant-image-preview-preview-img {
+  cursor: grabbing;
+}
+.ant-image-preview-root
+  .ant-image-preview-moving
+  .ant-image-preview-preview-img-wrapper {
+  transition-duration: 0s;
+}
+.ant-image-preview-root .ant-image-preview-wrap {
+  z-index: var(--ant-image-z-index-popup);
+}
+.ant-image-preview-operations-wrapper {
+  position: fixed;
+  z-index: calc(var(--ant-image-z-index-popup) + 1);
+}
+.ant-image-preview-footer {
+  position: fixed;
+  bottom: var(--ant-margin-xl);
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ant-image-preview-operation-color);
+  transform: translateX(-50%);
+}
+.ant-image-preview-progress {
+  margin-bottom: var(--ant-margin);
+}
+.ant-image-preview-close {
+  position: fixed;
+  top: var(--ant-margin-xl);
+  right: var(--ant-margin-xl);
+  display: flex;
+  color: var(--ant-color-text-light-solid);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: var(--ant-padding-sm);
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: all var(--ant-motion-duration-slow);
+}
+.ant-image-preview-close:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.ant-image-preview-close > .anticon {
+  font-size: var(--ant-image-preview-operation-size);
+}
+.ant-image-preview-operations {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--ant-padding-lg);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+}
+.ant-image-preview-operations-operation {
+  margin-inline-start: var(--ant-padding-sm);
+  padding: var(--ant-padding-sm);
+  cursor: pointer;
+  transition: all var(--ant-motion-duration-slow);
+  user-select: none;
+}
+.ant-image-preview-operations-operation:not(
+    .ant-image-preview-operations-operation-disabled
+  ):hover
+  > .anticon {
+  color: var(--ant-image-preview-operation-hover-color);
+}
+.ant-image-preview-operations-operation-disabled {
+  color: var(--ant-image-preview-operation-color-disabled);
+  cursor: not-allowed;
+}
+.ant-image-preview-operations-operation:first-of-type {
+  margin-inline-start: 0;
+}
+.ant-image-preview-operations-operation > .anticon {
+  font-size: var(--ant-image-preview-operation-size);
+}
+.ant-image-preview-switch-left,
+.ant-image-preview-switch-right {
+  position: fixed;
+  inset-block-start: 50%;
+  z-index: calc(var(--ant-image-z-index-popup) + 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ant-control-height-lg);
+  height: var(--ant-control-height-lg);
+  margin-top: calc(var(--ant-control-height-lg) * -1 / 2);
+  color: var(--ant-image-preview-operation-color);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all var(--ant-motion-duration-slow);
+  user-select: none;
+}
+.ant-image-preview-switch-left:hover,
+.ant-image-preview-switch-right:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.ant-image-preview-switch-left-disabled,
+.ant-image-preview-switch-right-disabled,
+.ant-image-preview-switch-left-disabled:hover,
+.ant-image-preview-switch-right-disabled:hover {
+  color: var(--ant-image-preview-operation-color-disabled);
+  background: transparent;
+  cursor: not-allowed;
+}
+.ant-image-preview-switch-left-disabled > .anticon,
+.ant-image-preview-switch-right-disabled > .anticon,
+.ant-image-preview-switch-left-disabled:hover > .anticon,
+.ant-image-preview-switch-right-disabled:hover > .anticon {
+  cursor: not-allowed;
+}
+.ant-image-preview-switch-left > .anticon,
+.ant-image-preview-switch-right > .anticon {
+  font-size: var(--ant-image-preview-operation-size);
+}
+.ant-image-preview-switch-left {
+  inset-inline-start: var(--ant-margin-sm);
+}
+.ant-image-preview-switch-right {
+  inset-inline-end: var(--ant-margin-sm);
+}
+.ant-image-preview-root .ant-image-preview.ant-zoom-enter,
+.ant-image-preview-root .ant-image-preview.ant-zoom-appear {
+  transform: none;
+  opacity: 0;
+  animation-duration: var(--ant-motion-duration-slow);
+  user-select: none;
+}
+.ant-image-preview-root
+  .ant-image-preview.ant-zoom-leave
+  .ant-image-preview-content {
+  pointer-events: none;
+}
+.ant-image-preview-root .ant-image-preview-mask {
+  position: fixed;
+  inset: 0;
+  z-index: var(--ant-z-index-popup-base);
+  height: 100%;
+  background-color: var(--ant-color-bg-mask);
+  pointer-events: none;
+}
+.ant-image-preview-root .ant-image-preview-mask .ant-image-preview-hidden {
+  display: none;
+}
+.ant-image-preview-root .ant-image-preview-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: var(--ant-z-index-popup-base);
+  overflow: auto;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.ant-image-preview-root .ant-fade-enter,
+.ant-image-preview-root .ant-fade-appear {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-image-preview-root .ant-fade-leave {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-image-preview-root .ant-fade-enter.ant-fade-enter-active,
+.ant-image-preview-root .ant-fade-appear.ant-fade-appear-active {
+  animation-name: antFadeIn;
+  animation-play-state: running;
+}
+.ant-image-preview-root .ant-fade-leave.ant-fade-leave-active {
+  animation-name: antFadeOut;
+  animation-play-state: running;
+  pointer-events: none;
+}
+.ant-image-preview-root .ant-fade-enter,
+.ant-image-preview-root .ant-fade-appear {
+  opacity: 0;
+  animation-timing-function: linear;
+}
+.ant-image-preview-root .ant-fade-leave {
+  animation-timing-function: linear;
+}
+.ant-image-preview-root .ant-zoom-enter,
+.ant-image-preview-root .ant-zoom-appear {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-image-preview-root .ant-zoom-leave {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-image-preview-root .ant-zoom-enter.ant-zoom-enter-active,
+.ant-image-preview-root .ant-zoom-appear.ant-zoom-appear-active {
+  animation-name: antZoomIn;
+  animation-play-state: running;
+}
+.ant-image-preview-root .ant-zoom-leave.ant-zoom-leave-active {
+  animation-name: antZoomOut;
+  animation-play-state: running;
+  pointer-events: none;
+}
+.ant-image-preview-root .ant-zoom-enter,
+.ant-image-preview-root .ant-zoom-appear {
+  transform: scale(0);
+  opacity: 0;
+  animation-timing-function: var(--ant-motion-ease-out-circ);
+}
+.ant-image-preview-root .ant-zoom-enter-prepare,
+.ant-image-preview-root .ant-zoom-appear-prepare {
+  transform: none;
+}
+.ant-image-preview-root .ant-zoom-leave {
+  animation-timing-function: var(--ant-motion-ease-in-out-circ);
+}
+.ant-fade-enter,
+.ant-fade-appear {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-fade-leave {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-fade-enter.ant-fade-enter-active,
+.ant-fade-appear.ant-fade-appear-active {
+  animation-name: antFadeIn;
+  animation-play-state: running;
+}
+.ant-fade-leave.ant-fade-leave-active {
+  animation-name: antFadeOut;
+  animation-play-state: running;
+  pointer-events: none;
+}
+.ant-fade-enter,
+.ant-fade-appear {
+  opacity: 0;
+  animation-timing-function: linear;
+}
+.ant-fade-leave {
+  animation-timing-function: linear;
+}
+@keyframes antFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes antFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes antZoomIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes antZoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,87 @@
+.ant-rate-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-rate-css-var::before,
+.ant-rate-css-var::after {
+  box-sizing: border-box;
+}
+.ant-rate-css-var [class^="ant-rate"],
+.ant-rate-css-var [class*=" ant-rate"] {
+  box-sizing: border-box;
+}
+.ant-rate-css-var [class^="ant-rate"]::before,
+.ant-rate-css-var [class*=" ant-rate"]::before,
+.ant-rate-css-var [class^="ant-rate"]::after,
+.ant-rate-css-var [class*=" ant-rate"]::after {
+  box-sizing: border-box;
+}
+.ant-rate {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-rate-star-color);
+  font-size: var(--ant-rate-star-size);
+  line-height: 1;
+  list-style: none;
+  font-family: var(--ant-font-family);
+  display: inline-block;
+  outline: none;
+}
+.ant-rate-disabled.ant-rate .ant-rate-star {
+  cursor: default;
+}
+.ant-rate-disabled.ant-rate .ant-rate-star > div:hover {
+  transform: scale(1);
+}
+.ant-rate .ant-rate-star {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  cursor: pointer;
+}
+.ant-rate .ant-rate-star:not(:last-child) {
+  margin-inline-end: var(--ant-margin-xs);
+}
+.ant-rate .ant-rate-star > div {
+  transition:
+    all var(--ant-motion-duration-mid),
+    outline 0s;
+}
+.ant-rate .ant-rate-star > div:hover {
+  transform: var(--ant-rate-star-hover-scale);
+}
+.ant-rate .ant-rate-star > div:focus {
+  outline: 0;
+}
+.ant-rate .ant-rate-star > div:focus-visible {
+  outline: var(--ant-line-width) dashed var(--ant-rate-star-color);
+  transform: var(--ant-rate-star-hover-scale);
+}
+.ant-rate .ant-rate-star-first,
+.ant-rate .ant-rate-star-second {
+  color: var(--ant-rate-star-bg);
+  transition: all var(--ant-motion-duration-mid);
+  user-select: none;
+}
+.ant-rate .ant-rate-star-first {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+.ant-rate .ant-rate-star-half .ant-rate-star-first,
+.ant-rate .ant-rate-star-half .ant-rate-star-second {
+  opacity: 1;
+}
+.ant-rate .ant-rate-star-half .ant-rate-star-first,
+.ant-rate .ant-rate-star-full .ant-rate-star-second {
+  color: inherit;
+}
+.ant-rate-rtl.ant-rate {
+  direction: rtl;
+}

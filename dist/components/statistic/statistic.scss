@@ -1,0 +1,56 @@
+.ant-statistic-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-statistic-css-var::before,
+.ant-statistic-css-var::after {
+  box-sizing: border-box;
+}
+.ant-statistic-css-var [class^="ant-statistic"],
+.ant-statistic-css-var [class*=" ant-statistic"] {
+  box-sizing: border-box;
+}
+.ant-statistic-css-var [class^="ant-statistic"]::before,
+.ant-statistic-css-var [class*=" ant-statistic"]::before,
+.ant-statistic-css-var [class^="ant-statistic"]::after,
+.ant-statistic-css-var [class*=" ant-statistic"]::after {
+  box-sizing: border-box;
+}
+.ant-statistic {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+}
+.ant-statistic .ant-statistic-title {
+  margin-bottom: var(--ant-margin-xxs);
+  color: var(--ant-color-text-description);
+  font-size: var(--ant-statistic-title-font-size);
+}
+.ant-statistic .ant-statistic-skeleton {
+  padding-top: var(--ant-padding);
+}
+.ant-statistic .ant-statistic-content {
+  color: var(--ant-color-text-heading);
+  font-size: var(--ant-statistic-content-font-size);
+  font-family: var(--ant-font-family);
+}
+.ant-statistic .ant-statistic-content .ant-statistic-content-value {
+  display: inline-block;
+  direction: ltr;
+}
+.ant-statistic .ant-statistic-content .ant-statistic-content-prefix,
+.ant-statistic .ant-statistic-content .ant-statistic-content-suffix {
+  display: inline-block;
+}
+.ant-statistic .ant-statistic-content .ant-statistic-content-prefix {
+  margin-inline-end: var(--ant-margin-xxs);
+}
+.ant-statistic .ant-statistic-content .ant-statistic-content-suffix {
+  margin-inline-start: var(--ant-margin-xxs);
+}

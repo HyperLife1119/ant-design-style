@@ -1,0 +1,50 @@
+a {
+  color: var(--ant-color-link);
+  text-decoration: var(--ant-link-decoration);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color var(--ant-motion-duration-slow);
+  -webkit-text-decoration-skip: objects;
+}
+a:hover {
+  color: var(--ant-color-link-hover);
+}
+a:active {
+  color: var(--ant-color-link-active);
+}
+a:active,
+a:hover {
+  text-decoration: var(--ant-link-hover-decoration);
+  outline: 0;
+}
+a:focus {
+  text-decoration: var(--ant-link-focus-decoration);
+  outline: 0;
+}
+a[disabled] {
+  color: var(--ant-color-text-disabled);
+  cursor: not-allowed;
+}
+.anticon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.anticon > * {
+  line-height: 1;
+}
+.anticon svg {
+  display: inline-block;
+}
+.anticon .anticon .anticon-icon {
+  display: block;
+}

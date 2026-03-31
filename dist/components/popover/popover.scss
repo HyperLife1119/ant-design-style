@@ -1,0 +1,348 @@
+.ant-popover {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--ant-popover-z-index-popup);
+  font-weight: normal;
+  white-space: normal;
+  text-align: start;
+  cursor: auto;
+  user-select: text;
+  --valid-offset-x: var(--arrow-offset-horizontal, var(--arrow-x));
+  transform-origin: var(--valid-offset-x, 50%) var(--arrow-y, 50%);
+  --antd-arrow-background-color: var(--ant-color-bg-elevated);
+  width: max-content;
+  max-width: 100vw;
+}
+.ant-popover-rtl {
+  direction: rtl;
+}
+.ant-popover-hidden {
+  display: none;
+}
+.ant-popover .ant-popover-content {
+  position: relative;
+}
+.ant-popover .ant-popover-inner {
+  background-color: var(--ant-color-bg-elevated);
+  background-clip: padding-box;
+  border-radius: var(--ant-border-radius-lg);
+  box-shadow: var(--ant-box-shadow-secondary);
+  padding: var(--ant-popover-inner-padding);
+}
+.ant-popover .ant-popover-title {
+  min-width: var(--ant-popover-title-min-width);
+  margin-bottom: var(--ant-popover-title-margin-bottom);
+  color: var(--ant-color-text-heading);
+  font-weight: var(--ant-font-weight-strong);
+  border-bottom: var(--ant-popover-title-border-bottom);
+  padding: var(--ant-popover-title-padding);
+}
+.ant-popover .ant-popover-inner-content {
+  color: var(--ant-color-text);
+  padding: var(--ant-popover-inner-content-padding);
+}
+.ant-popover .ant-popover-arrow {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  width: var(--ant-size-popup-arrow);
+  height: var(--ant-size-popup-arrow);
+  overflow: hidden;
+}
+.ant-popover .ant-popover-arrow::before {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: var(--ant-size-popup-arrow);
+  height: calc(var(--ant-size-popup-arrow) / 2);
+  background: var(--antd-arrow-background-color);
+  clip-path: var(--ant-popover-arrow-polygon);
+  clip-path: var(--ant-popover-arrow-path);
+  content: "";
+}
+.ant-popover .ant-popover-arrow::after {
+  content: "";
+  position: absolute;
+  width: var(--ant-popover-arrow-shadow-width);
+  height: var(--ant-popover-arrow-shadow-width);
+  bottom: 0;
+  inset-inline: 0;
+  margin: auto;
+  border-radius: 0 0 var(--ant-border-radius-xs) 0;
+  transform: translateY(50%) rotate(-135deg);
+  box-shadow: var(--ant-box-shadow-popover-arrow);
+  z-index: 0;
+  background: transparent;
+}
+.ant-popover .ant-popover-arrow:before {
+  background: var(--antd-arrow-background-color);
+}
+.ant-popover-placement-top > .ant-popover-arrow,
+.ant-popover-placement-topLeft > .ant-popover-arrow,
+.ant-popover-placement-topRight > .ant-popover-arrow {
+  bottom: 0;
+  transform: translateY(100%) rotate(180deg);
+}
+.ant-popover-placement-top > .ant-popover-arrow {
+  left: 50%;
+  transform: translateX(-50%) translateY(100%) rotate(180deg);
+}
+.ant-popover-placement-topLeft {
+  --arrow-offset-horizontal: var(--ant-popover-arrow-offset-horizontal);
+}
+.ant-popover-placement-topLeft > .ant-popover-arrow {
+  left: var(--ant-popover-arrow-offset-horizontal);
+}
+.ant-popover-placement-topRight {
+  --arrow-offset-horizontal: calc(
+    100% - var(--ant-popover-arrow-offset-horizontal)
+  );
+}
+.ant-popover-placement-topRight > .ant-popover-arrow {
+  right: var(--ant-popover-arrow-offset-horizontal);
+}
+.ant-popover-placement-bottom > .ant-popover-arrow,
+.ant-popover-placement-bottomLeft > .ant-popover-arrow,
+.ant-popover-placement-bottomRight > .ant-popover-arrow {
+  top: 0;
+  transform: translateY(-100%);
+}
+.ant-popover-placement-bottom > .ant-popover-arrow {
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.ant-popover-placement-bottomLeft {
+  --arrow-offset-horizontal: var(--ant-popover-arrow-offset-horizontal);
+}
+.ant-popover-placement-bottomLeft > .ant-popover-arrow {
+  left: var(--ant-popover-arrow-offset-horizontal);
+}
+.ant-popover-placement-bottomRight {
+  --arrow-offset-horizontal: calc(
+    100% - var(--ant-popover-arrow-offset-horizontal)
+  );
+}
+.ant-popover-placement-bottomRight > .ant-popover-arrow {
+  right: var(--ant-popover-arrow-offset-horizontal);
+}
+.ant-popover-placement-left > .ant-popover-arrow,
+.ant-popover-placement-leftTop > .ant-popover-arrow,
+.ant-popover-placement-leftBottom > .ant-popover-arrow {
+  right: 0;
+  transform: translateX(100%) rotate(90deg);
+}
+.ant-popover-placement-left > .ant-popover-arrow {
+  top: 50%;
+  transform: translateY(-50%) translateX(100%) rotate(90deg);
+}
+.ant-popover-placement-leftTop > .ant-popover-arrow {
+  top: var(--ant-popover-arrow-offset-vertical);
+}
+.ant-popover-placement-leftBottom > .ant-popover-arrow {
+  bottom: var(--ant-popover-arrow-offset-vertical);
+}
+.ant-popover-placement-right > .ant-popover-arrow,
+.ant-popover-placement-rightTop > .ant-popover-arrow,
+.ant-popover-placement-rightBottom > .ant-popover-arrow {
+  left: 0;
+  transform: translateX(-100%) rotate(-90deg);
+}
+.ant-popover-placement-right > .ant-popover-arrow {
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%) rotate(-90deg);
+}
+.ant-popover-placement-rightTop > .ant-popover-arrow {
+  top: var(--ant-popover-arrow-offset-vertical);
+}
+.ant-popover-placement-rightBottom > .ant-popover-arrow {
+  bottom: var(--ant-popover-arrow-offset-vertical);
+}
+.ant-popover-pure {
+  position: relative;
+  max-width: none;
+  margin: var(--ant-size-popup-arrow);
+  display: inline-block;
+}
+.ant-popover-pure .ant-popover-content {
+  display: inline-block;
+}
+.ant-popover.ant-popover-blue {
+  --antd-arrow-background-color: var(--ant-blue-6);
+}
+.ant-popover.ant-popover-blue .ant-popover-inner {
+  background-color: var(--ant-blue-6);
+}
+.ant-popover.ant-popover-blue .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-purple {
+  --antd-arrow-background-color: var(--ant-purple-6);
+}
+.ant-popover.ant-popover-purple .ant-popover-inner {
+  background-color: var(--ant-purple-6);
+}
+.ant-popover.ant-popover-purple .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-cyan {
+  --antd-arrow-background-color: var(--ant-cyan-6);
+}
+.ant-popover.ant-popover-cyan .ant-popover-inner {
+  background-color: var(--ant-cyan-6);
+}
+.ant-popover.ant-popover-cyan .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-green {
+  --antd-arrow-background-color: var(--ant-green-6);
+}
+.ant-popover.ant-popover-green .ant-popover-inner {
+  background-color: var(--ant-green-6);
+}
+.ant-popover.ant-popover-green .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-magenta {
+  --antd-arrow-background-color: var(--ant-magenta-6);
+}
+.ant-popover.ant-popover-magenta .ant-popover-inner {
+  background-color: var(--ant-magenta-6);
+}
+.ant-popover.ant-popover-magenta .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-pink {
+  --antd-arrow-background-color: var(--ant-pink-6);
+}
+.ant-popover.ant-popover-pink .ant-popover-inner {
+  background-color: var(--ant-pink-6);
+}
+.ant-popover.ant-popover-pink .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-red {
+  --antd-arrow-background-color: var(--ant-red-6);
+}
+.ant-popover.ant-popover-red .ant-popover-inner {
+  background-color: var(--ant-red-6);
+}
+.ant-popover.ant-popover-red .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-orange {
+  --antd-arrow-background-color: var(--ant-orange-6);
+}
+.ant-popover.ant-popover-orange .ant-popover-inner {
+  background-color: var(--ant-orange-6);
+}
+.ant-popover.ant-popover-orange .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-yellow {
+  --antd-arrow-background-color: var(--ant-yellow-6);
+}
+.ant-popover.ant-popover-yellow .ant-popover-inner {
+  background-color: var(--ant-yellow-6);
+}
+.ant-popover.ant-popover-yellow .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-volcano {
+  --antd-arrow-background-color: var(--ant-volcano-6);
+}
+.ant-popover.ant-popover-volcano .ant-popover-inner {
+  background-color: var(--ant-volcano-6);
+}
+.ant-popover.ant-popover-volcano .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-geekblue {
+  --antd-arrow-background-color: var(--ant-geekblue-6);
+}
+.ant-popover.ant-popover-geekblue .ant-popover-inner {
+  background-color: var(--ant-geekblue-6);
+}
+.ant-popover.ant-popover-geekblue .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-lime {
+  --antd-arrow-background-color: var(--ant-lime-6);
+}
+.ant-popover.ant-popover-lime .ant-popover-inner {
+  background-color: var(--ant-lime-6);
+}
+.ant-popover.ant-popover-lime .ant-popover-arrow {
+  background: transparent;
+}
+.ant-popover.ant-popover-gold {
+  --antd-arrow-background-color: var(--ant-gold-6);
+}
+.ant-popover.ant-popover-gold .ant-popover-inner {
+  background-color: var(--ant-gold-6);
+}
+.ant-popover.ant-popover-gold .ant-popover-arrow {
+  background: transparent;
+}
+.ant-zoom-big-enter,
+.ant-zoom-big-appear {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-zoom-big-leave {
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+.ant-zoom-big-enter.ant-zoom-big-enter-active,
+.ant-zoom-big-appear.ant-zoom-big-appear-active {
+  animation-name: antZoomBigIn;
+  animation-play-state: running;
+}
+.ant-zoom-big-leave.ant-zoom-big-leave-active {
+  animation-name: antZoomBigOut;
+  animation-play-state: running;
+  pointer-events: none;
+}
+.ant-zoom-big-enter,
+.ant-zoom-big-appear {
+  transform: scale(0);
+  opacity: 0;
+  animation-timing-function: var(--ant-motion-ease-out-circ);
+}
+.ant-zoom-big-enter-prepare,
+.ant-zoom-big-appear-prepare {
+  transform: none;
+}
+.ant-zoom-big-leave {
+  animation-timing-function: var(--ant-motion-ease-in-out-circ);
+}
+@keyframes antZoomBigIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes antZoomBigOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,162 @@
+.ant-alert-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-alert-css-var::before,
+.ant-alert-css-var::after {
+  box-sizing: border-box;
+}
+.ant-alert-css-var [class^="ant-alert"],
+.ant-alert-css-var [class*=" ant-alert"] {
+  box-sizing: border-box;
+}
+.ant-alert-css-var [class^="ant-alert"]::before,
+.ant-alert-css-var [class*=" ant-alert"]::before,
+.ant-alert-css-var [class^="ant-alert"]::after,
+.ant-alert-css-var [class*=" ant-alert"]::after {
+  box-sizing: border-box;
+}
+.ant-alert {
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--ant-alert-default-padding);
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  position: relative;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  border-radius: var(--ant-border-radius-lg);
+}
+.ant-alert.ant-alert-rtl {
+  direction: rtl;
+}
+.ant-alert .ant-alert-content {
+  flex: 1;
+  min-width: 0;
+}
+.ant-alert .ant-alert-icon {
+  margin-inline-end: var(--ant-margin-xs);
+  line-height: 0;
+}
+.ant-alert-description {
+  display: none;
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+}
+.ant-alert-message {
+  color: var(--ant-color-text-heading);
+}
+.ant-alert.ant-alert-motion-leave {
+  overflow: hidden;
+  opacity: 1;
+  transition:
+    max-height var(--ant-motion-duration-slow)
+      var(--ant-motion-ease-in-out-circ),
+    opacity var(--ant-motion-duration-slow) var(--ant-motion-ease-in-out-circ),
+    padding-top var(--ant-motion-duration-slow)
+      var(--ant-motion-ease-in-out-circ),
+    padding-bottom var(--ant-motion-duration-slow)
+      var(--ant-motion-ease-in-out-circ),
+    margin-bottom var(--ant-motion-duration-slow)
+      var(--ant-motion-ease-in-out-circ);
+}
+.ant-alert.ant-alert-motion-leave-active {
+  max-height: 0;
+  margin-bottom: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+.ant-alert-with-description {
+  align-items: flex-start;
+  padding: var(--ant-alert-with-description-padding);
+}
+.ant-alert-with-description .ant-alert-icon {
+  margin-inline-end: var(--ant-margin-sm);
+  font-size: var(--ant-alert-with-description-icon-size);
+  line-height: 0;
+}
+.ant-alert-with-description .ant-alert-message {
+  display: block;
+  margin-bottom: var(--ant-margin-xs);
+  color: var(--ant-color-text-heading);
+  font-size: var(--ant-font-size-lg);
+}
+.ant-alert-with-description .ant-alert-description {
+  display: block;
+  color: var(--ant-color-text);
+}
+.ant-alert-banner {
+  margin-bottom: 0;
+  border: 0 !important;
+  border-radius: 0;
+}
+.ant-alert-success {
+  background: var(--ant-color-success-bg);
+  border: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-color-success-border);
+}
+.ant-alert-success .ant-alert-icon {
+  color: var(--ant-color-success);
+}
+.ant-alert-info {
+  background: var(--ant-color-info-bg);
+  border: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-color-info-border);
+}
+.ant-alert-info .ant-alert-icon {
+  color: var(--ant-color-info);
+}
+.ant-alert-warning {
+  background: var(--ant-color-warning-bg);
+  border: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-color-warning-border);
+}
+.ant-alert-warning .ant-alert-icon {
+  color: var(--ant-color-warning);
+}
+.ant-alert-error {
+  background: var(--ant-color-error-bg);
+  border: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-color-error-border);
+}
+.ant-alert-error .ant-alert-icon {
+  color: var(--ant-color-error);
+}
+.ant-alert-error .ant-alert-description > pre {
+  margin: 0;
+  padding: 0;
+}
+.ant-alert-action {
+  margin-inline-start: var(--ant-margin-xs);
+}
+.ant-alert .ant-alert-close-icon {
+  margin-inline-start: var(--ant-margin-xs);
+  padding: 0;
+  overflow: hidden;
+  font-size: var(--ant-font-size-icon);
+  line-height: var(--ant-font-size-icon);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.ant-alert .ant-alert-close-icon .anticon-close {
+  color: var(--ant-color-icon);
+  transition: color var(--ant-motion-duration-mid);
+}
+.ant-alert .ant-alert-close-icon .anticon-close:hover {
+  color: var(--ant-color-icon-hover);
+}
+.ant-alert-close-text {
+  color: var(--ant-color-icon);
+  transition: color var(--ant-motion-duration-mid);
+}
+.ant-alert-close-text:hover {
+  color: var(--ant-color-icon-hover);
+}

@@ -1,0 +1,527 @@
+.ant-form-css-var {
+  font-family: var(--ant-font-family);
+  font-size: var(--ant-font-size);
+  box-sizing: border-box;
+}
+.ant-form-css-var::before,
+.ant-form-css-var::after {
+  box-sizing: border-box;
+}
+.ant-form-css-var [class^="ant-form"],
+.ant-form-css-var [class*=" ant-form"] {
+  box-sizing: border-box;
+}
+.ant-form-css-var [class^="ant-form"]::before,
+.ant-form-css-var [class*=" ant-form"]::before,
+.ant-form-css-var [class^="ant-form"]::after,
+.ant-form-css-var [class*=" ant-form"]::after {
+  box-sizing: border-box;
+}
+.ant-form {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+}
+.ant-form legend {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--ant-margin-lg);
+  padding: 0;
+  color: var(--ant-color-text-description);
+  font-size: var(--ant-font-size-lg);
+  line-height: inherit;
+  border: 0;
+  border-bottom: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-color-border);
+}
+.ant-form input[type="search"] {
+  box-sizing: border-box;
+}
+.ant-form input[type="radio"],
+.ant-form input[type="checkbox"] {
+  line-height: normal;
+}
+.ant-form input[type="file"] {
+  display: block;
+}
+.ant-form input[type="range"] {
+  display: block;
+  width: 100%;
+}
+.ant-form select[multiple],
+.ant-form select[size] {
+  height: auto;
+}
+.ant-form input[type="file"]:focus,
+.ant-form input[type="radio"]:focus,
+.ant-form input[type="checkbox"]:focus {
+  outline: 0;
+  box-shadow: 0 0 0 var(--ant-control-outline-width) var(--ant-control-outline);
+}
+.ant-form output {
+  display: block;
+  padding-top: 15px;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+}
+.ant-form .ant-form-text {
+  display: inline-block;
+  padding-inline-end: var(--ant-padding-sm);
+}
+.ant-form-small .ant-form-item .ant-form-item-label > label {
+  height: var(--ant-control-height-sm);
+}
+.ant-form-small .ant-form-item .ant-form-item-control-input {
+  min-height: var(--ant-control-height-sm);
+}
+.ant-form-large .ant-form-item .ant-form-item-label > label {
+  height: var(--ant-control-height-lg);
+}
+.ant-form-large .ant-form-item .ant-form-item-control-input {
+  min-height: var(--ant-control-height-lg);
+}
+.ant-form-item {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+  list-style: none;
+  font-family: var(--ant-font-family);
+  margin-bottom: var(--ant-form-item-margin-bottom);
+  vertical-align: top;
+}
+.ant-form-item-with-help {
+  transition: none;
+}
+.ant-form-item-hidden,
+.ant-form-item-hidden.ant-row {
+  display: none;
+}
+.ant-form-item-has-warning .ant-form-item-split {
+  color: var(--ant-color-error);
+}
+.ant-form-item-has-error .ant-form-item-split {
+  color: var(--ant-color-warning);
+}
+.ant-form-item .ant-form-item-label {
+  flex-grow: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: end;
+  vertical-align: middle;
+}
+.ant-form-item .ant-form-item-label-left {
+  text-align: start;
+}
+.ant-form-item .ant-form-item-label-wrap {
+  overflow: unset;
+  line-height: var(--ant-line-height);
+  white-space: unset;
+}
+.ant-form-item .ant-form-item-label-wrap > label {
+  vertical-align: middle;
+  text-wrap: balance;
+}
+.ant-form-item .ant-form-item-label > label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  height: var(--ant-form-label-height);
+  color: var(--ant-form-label-color);
+  font-size: var(--ant-form-label-font-size);
+}
+.ant-form-item .ant-form-item-label > label > .anticon {
+  font-size: var(--ant-font-size);
+  vertical-align: top;
+}
+.ant-form-item .ant-form-item-label > label.ant-form-item-required::before {
+  display: inline-block;
+  margin-inline-end: var(--ant-margin-xxs);
+  color: var(--ant-form-label-required-mark-color);
+  font-size: var(--ant-font-size);
+  font-family: SimSun, sans-serif;
+  line-height: 1;
+  content: "*";
+}
+.ant-form-item
+  .ant-form-item-label
+  > label.ant-form-item-required.ant-form-item-required-mark-hidden::before,
+.ant-form-item
+  .ant-form-item-label
+  > label.ant-form-item-required.ant-form-item-required-mark-optional::before {
+  display: none;
+}
+.ant-form-item .ant-form-item-label > label .ant-form-item-optional {
+  display: inline-block;
+  margin-inline-start: var(--ant-margin-xxs);
+  color: var(--ant-color-text-description);
+}
+.ant-form-item
+  .ant-form-item-label
+  > label
+  .ant-form-item-optional.ant-form-item-required-mark-hidden {
+  display: none;
+}
+.ant-form-item .ant-form-item-label > label .ant-form-item-tooltip {
+  color: var(--ant-color-text-description);
+  cursor: help;
+  writing-mode: horizontal-tb;
+  margin-inline-start: var(--ant-margin-xxs);
+}
+.ant-form-item .ant-form-item-label > label::after {
+  content: ":";
+  position: relative;
+  margin-block: 0;
+  margin-inline-start: var(--ant-form-label-colon-margin-inline-start);
+  margin-inline-end: var(--ant-form-label-colon-margin-inline-end);
+}
+.ant-form-item .ant-form-item-label > label.ant-form-item-no-colon::after {
+  content: "\a0";
+}
+.ant-form-item .ant-form-item-control {
+  --ant-display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.ant-form-item
+  .ant-form-item-control:first-child:not([class^="'ant-col-'"]):not(
+    [class*="' ant-col-'"]
+  ) {
+  width: 100%;
+}
+.ant-form-item .ant-form-item-control-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: var(--ant-control-height);
+}
+.ant-form-item .ant-form-item-control-input-content {
+  flex: auto;
+  max-width: 100%;
+}
+.ant-form-item
+  .ant-form-item-control-input-content:has(
+    > .ant-switch:only-child,
+    > .ant-rate:only-child
+  ) {
+  display: flex;
+  align-items: center;
+}
+.ant-form-item .ant-form-item-additional {
+  display: flex;
+  flex-direction: column;
+}
+.ant-form-item .ant-form-item-explain,
+.ant-form-item .ant-form-item-extra {
+  clear: both;
+  color: var(--ant-color-text-description);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
+}
+.ant-form-item .ant-form-item-explain-connected {
+  width: 100%;
+}
+.ant-form-item .ant-form-item-extra {
+  min-height: var(--ant-control-height-sm);
+  transition: color var(--ant-motion-duration-mid) var(--ant-motion-ease-out);
+}
+.ant-form-item .ant-form-item-explain-error {
+  color: var(--ant-color-error);
+}
+.ant-form-item .ant-form-item-explain-warning {
+  color: var(--ant-color-warning);
+}
+.ant-form-item-with-help .ant-form-item-explain {
+  height: auto;
+  opacity: 1;
+}
+.ant-form-item .ant-form-item-feedback-icon {
+  font-size: var(--ant-font-size);
+  text-align: center;
+  visibility: visible;
+  animation-name: antZoomIn;
+  animation-duration: var(--ant-motion-duration-mid);
+  animation-timing-function: var(--ant-motion-ease-out-back);
+  pointer-events: none;
+}
+.ant-form-item .ant-form-item-feedback-icon-success {
+  color: var(--ant-color-success);
+}
+.ant-form-item .ant-form-item-feedback-icon-error {
+  color: var(--ant-color-error);
+}
+.ant-form-item .ant-form-item-feedback-icon-warning {
+  color: var(--ant-color-warning);
+}
+.ant-form-item .ant-form-item-feedback-icon-validating {
+  color: var(--ant-color-primary);
+}
+.ant-form-show-help {
+  transition: opacity var(--ant-motion-duration-fast)
+    var(--ant-motion-ease-in-out);
+}
+.ant-form-show-help-appear,
+.ant-form-show-help-enter {
+  opacity: 0;
+}
+.ant-form-show-help-appear-active,
+.ant-form-show-help-enter-active {
+  opacity: 1;
+}
+.ant-form-show-help-leave {
+  opacity: 1;
+}
+.ant-form-show-help-leave-active {
+  opacity: 0;
+}
+.ant-form-show-help .ant-form-show-help-item {
+  overflow: hidden;
+  transition:
+    height var(--ant-motion-duration-fast) var(--ant-motion-ease-in-out),
+    opacity var(--ant-motion-duration-fast) var(--ant-motion-ease-in-out),
+    transform var(--ant-motion-duration-fast) var(--ant-motion-ease-in-out) !important;
+}
+.ant-form-show-help .ant-form-show-help-item.ant-form-show-help-item-appear,
+.ant-form-show-help .ant-form-show-help-item.ant-form-show-help-item-enter {
+  transform: translateY(-5px);
+  opacity: 0;
+}
+.ant-form-show-help
+  .ant-form-show-help-item.ant-form-show-help-item-appear-active,
+.ant-form-show-help
+  .ant-form-show-help-item.ant-form-show-help-item-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.ant-form-show-help
+  .ant-form-show-help-item.ant-form-show-help-item-leave-active {
+  transform: translateY(-5px);
+}
+.ant-form-item-horizontal .ant-form-item-label {
+  flex-grow: 0;
+}
+.ant-form-item-horizontal .ant-form-item-control {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.ant-form-item-horizontal
+  .ant-form-item-label[class$="-24"]
+  + .ant-form-item-control,
+.ant-form-item-horizontal
+  .ant-form-item-label[class*="-24 "]
+  + .ant-form-item-control {
+  min-width: unset;
+}
+.ant-form-item-horizontal .ant-col-24.ant-form-item-label,
+.ant-form-item-horizontal .ant-col-xl-24.ant-form-item-label {
+  padding: var(--ant-form-vertical-label-padding);
+  margin: var(--ant-form-vertical-label-margin);
+  white-space: initial;
+  text-align: start;
+}
+.ant-form-item-horizontal .ant-col-24.ant-form-item-label > label,
+.ant-form-item-horizontal .ant-col-xl-24.ant-form-item-label > label {
+  margin: 0;
+}
+.ant-form-item-horizontal .ant-col-24.ant-form-item-label > label::after,
+.ant-form-item-horizontal .ant-col-xl-24.ant-form-item-label > label::after {
+  visibility: hidden;
+}
+.ant-form-inline {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ant-form-inline .ant-form-item-inline {
+  flex: none;
+  margin-inline-end: var(--ant-margin);
+  margin-bottom: var(--ant-form-inline-item-margin-bottom);
+}
+.ant-form-inline .ant-form-item-inline-row {
+  flex-wrap: nowrap;
+}
+.ant-form-inline .ant-form-item-inline > .ant-form-item-label,
+.ant-form-inline .ant-form-item-inline > .ant-form-item-control {
+  display: inline-block;
+  vertical-align: top;
+}
+.ant-form-inline .ant-form-item-inline > .ant-form-item-label {
+  flex: none;
+}
+.ant-form-inline .ant-form-item-inline .ant-form-text {
+  display: inline-block;
+}
+.ant-form-inline .ant-form-item-inline .ant-form-item-has-feedback {
+  display: inline-block;
+}
+.ant-form-item-vertical .ant-form-item-row {
+  flex-direction: column;
+}
+.ant-form-item-vertical .ant-form-item-label > label {
+  height: auto;
+}
+.ant-form-item-vertical .ant-form-item-control {
+  width: 100%;
+}
+.ant-form-item-vertical .ant-form-item-label,
+.ant-form-item-vertical .ant-col-24.ant-form-item-label,
+.ant-form-item-vertical .ant-col-xl-24.ant-form-item-label {
+  padding: var(--ant-form-vertical-label-padding);
+  margin: var(--ant-form-vertical-label-margin);
+  white-space: initial;
+  text-align: start;
+}
+.ant-form-item-vertical .ant-form-item-label > label,
+.ant-form-item-vertical .ant-col-24.ant-form-item-label > label,
+.ant-form-item-vertical .ant-col-xl-24.ant-form-item-label > label {
+  margin: 0;
+}
+.ant-form-item-vertical .ant-form-item-label > label::after,
+.ant-form-item-vertical .ant-col-24.ant-form-item-label > label::after,
+.ant-form-item-vertical .ant-col-xl-24.ant-form-item-label > label::after {
+  visibility: hidden;
+}
+@media (max-width: 575px) {
+  .ant-form-item .ant-form-item-label {
+    padding: var(--ant-form-vertical-label-padding);
+    margin: var(--ant-form-vertical-label-margin);
+    white-space: initial;
+    text-align: start;
+  }
+  .ant-form-item .ant-form-item-label > label {
+    margin: 0;
+  }
+  .ant-form-item .ant-form-item-label > label::after {
+    visibility: hidden;
+  }
+  .ant-form:not(.ant-form-inline) .ant-form-item {
+    flex-wrap: wrap;
+  }
+  .ant-form:not(.ant-form-inline)
+    .ant-form-item
+    .ant-form-item-label:not([class*=" ant-col-xs"]),
+  .ant-form:not(.ant-form-inline)
+    .ant-form-item
+    .ant-form-item-control:not([class*=" ant-col-xs"]) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-xs-24.ant-form-item-label {
+    padding: var(--ant-form-vertical-label-padding);
+    margin: var(--ant-form-vertical-label-margin);
+    white-space: initial;
+    text-align: start;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-xs-24.ant-form-item-label
+    > label {
+    margin: 0;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-xs-24.ant-form-item-label
+    > label::after {
+    visibility: hidden;
+  }
+}
+@media (max-width: 767px) {
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-sm-24.ant-form-item-label {
+    padding: var(--ant-form-vertical-label-padding);
+    margin: var(--ant-form-vertical-label-margin);
+    white-space: initial;
+    text-align: start;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-sm-24.ant-form-item-label
+    > label {
+    margin: 0;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-sm-24.ant-form-item-label
+    > label::after {
+    visibility: hidden;
+  }
+}
+@media (max-width: 991px) {
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-md-24.ant-form-item-label {
+    padding: var(--ant-form-vertical-label-padding);
+    margin: var(--ant-form-vertical-label-margin);
+    white-space: initial;
+    text-align: start;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-md-24.ant-form-item-label
+    > label {
+    margin: 0;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-md-24.ant-form-item-label
+    > label::after {
+    visibility: hidden;
+  }
+}
+@media (max-width: 1199px) {
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-lg-24.ant-form-item-label {
+    padding: var(--ant-form-vertical-label-padding);
+    margin: var(--ant-form-vertical-label-margin);
+    white-space: initial;
+    text-align: start;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-lg-24.ant-form-item-label
+    > label {
+    margin: 0;
+  }
+  .ant-form
+    .ant-form-item:not(.ant-form-item-horizontal)
+    .ant-col-lg-24.ant-form-item-label
+    > label::after {
+    visibility: hidden;
+  }
+}
+.ant-form .ant-motion-collapse-legacy {
+  overflow: hidden;
+}
+.ant-form .ant-motion-collapse-legacy-active {
+  transition:
+    height var(--ant-motion-duration-mid) var(--ant-motion-ease-in-out),
+    opacity var(--ant-motion-duration-mid) var(--ant-motion-ease-in-out) !important;
+}
+.ant-form .ant-motion-collapse {
+  overflow: hidden;
+  transition:
+    height var(--ant-motion-duration-mid) var(--ant-motion-ease-in-out),
+    opacity var(--ant-motion-duration-mid) var(--ant-motion-ease-in-out) !important;
+}
+@keyframes antZoomIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
