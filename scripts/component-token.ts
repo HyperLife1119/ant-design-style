@@ -1,6 +1,6 @@
 import { theme } from 'antd';
 
-const { initComponentToken } = await import('antd/es/input/style/token');
+const { initComponentToken, initInputToken } = await import('antd/es/input/style/token');
 const { prepareComponentToken } = await import('antd/es/button/style/token');
 
 const designToken = theme.getDesignToken({
@@ -9,4 +9,4 @@ const designToken = theme.getDesignToken({
 })
 
 console.log(initComponentToken(designToken));
-console.log(prepareComponentToken(designToken));
+console.log(initInputToken(designToken));
