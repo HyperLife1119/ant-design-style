@@ -49,7 +49,7 @@ async function processWithPostcss(css: string) {
 }
 
 function isCommonStyleKey(key: string) {
-  return COMMON_STYLE_KEYS.some((pattern) => key.includes(pattern));
+  return COMMON_STYLE_KEYS.some((pattern) => key.includes(`%${pattern}%`));
 }
 
 function cloneCache(

@@ -57,7 +57,6 @@ export const generateCssinjs = ({ prefix, render }: GenCssinjsOptions) => {
         useStyle = (prefixCls) => {
           const rowPrefixCls = prefixCls.replace('grid', 'row');
           const colPrefixCls = prefixCls.replace('grid', 'col');
-
           const [wrapRowCSSVar] = useRowStyle(rowPrefixCls, useCSSVarCls(rowPrefixCls));
           const [wrapColCSSVar] = useColStyle(colPrefixCls, useCSSVarCls(colPrefixCls));
           return [
@@ -75,6 +74,27 @@ export const generateCssinjs = ({ prefix, render }: GenCssinjsOptions) => {
         useStyle = (prefixCls) => {
           prefixCls = prefixCls.replace('button', 'btn')
           return originalUseStyle(prefixCls);
+        }
+      } else if (file.includes('/input/')) {
+        const { default: originalUseStyle, useSharedStyle } = await import(absPath);
+        const useTextareaStyle = (await import(absPath.replace('index.js', 'textarea.js'))).default;
+        const useOtpStyle = (await import(absPath.replace('index.js', 'otp.js'))).default;
+        useStyle = (prefixCls, rootCls) => {
+          const [wrapInputSharedCSSVar] = useSharedStyle(prefixCls, rootCls);
+          const [wrapTextareaCSSVar] = useTextareaStyle(prefixCls, rootCls);
+          const [wrapOtpCSSVar] = useOtpStyle(prefixCls, rootCls);
+          const [wrapInputCSSVar] = originalUseStyle(prefixCls, rootCls);
+
+          return [
+            (node: React.ReactElement) => {
+              wrapInputSharedCSSVar(node);
+              wrapTextareaCSSVar(node);
+              wrapOtpCSSVar(node);
+              return wrapInputCSSVar(node);
+            },
+            'hashId',
+            'cssVarCls',
+          ]
         }
       } else if (file.includes('tree-select')) {
         const originalUseStyle = (await import(absPath)).default;
